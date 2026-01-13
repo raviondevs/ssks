@@ -1,6 +1,7 @@
 import PagePlaceholder from '../components/PagePlaceholder';
 import VideoCard from '../components/VideoCard';
 import cardDefaultImg from '../assets/card-default.jpg';
+import NestedDropdown from '../components/NestedDropdown';
 
 export default function Videos() {
     const videos = [
@@ -15,16 +16,23 @@ export default function Videos() {
         { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "15:30", thumbnail: cardDefaultImg },
     ];
 
+    const categoryItems = [
+        { label: 'All Category', value: 'all' },
+        { label: 'Latest Video', value: 'latest' },
+        { label: 'Hari Bhag', value: 'hari_bhag' },
+        { label: 'Hari Smruti', value: 'hari_smruti' },
+        { label: 'Manoranjan', value: 'manoranjan' },
+        { label: 'Miscellaneous', value: 'misc' },
+    ];
+
     const filters = (
         <div className="flex gap-4">
-            <select className="border border-[#E5E7EB] rounded-full px-5 py-2 text-sm bg-white outline-none cursor-pointer hover:border-[#3B82F6] transition-colors text-[#1E3A8A]">
-                <option>All Category</option>
-                <option>Latest Video</option>
-                <option>Hari Bhag</option>
-                <option>Hari Smruti</option>
-                <option>Manoranjan</option>
-                <option>Miscellaneous</option>
-            </select>
+            <NestedDropdown
+                label="All Category"
+                items={categoryItems}
+                width="320px"
+                className="w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
         </div>
     );
 

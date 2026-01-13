@@ -1,12 +1,13 @@
 import PagePlaceholder from '../components/PagePlaceholder';
+import DatePickerDropdown from '../components/DatePickerDropdown';
 
 export default function Darshan() {
     const filters = (
         <div className="flex gap-4">
-            <div className="border border-[#3B82F6] rounded-full px-6 py-1.5 text-sm text-[#3B82F6] flex items-center gap-2 cursor-pointer bg-white">
-                DD/MM/YYYY
-                <span className="text-xs">▼</span>
-            </div>
+            <DatePickerDropdown
+                width="358px"
+                className="w-[358px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
         </div>
     );
 

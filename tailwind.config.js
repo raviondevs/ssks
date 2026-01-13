@@ -106,6 +106,7 @@ export default {
             fontFamily: {
                 katibeh: ['Katibeh', 'cursive'],
                 outfit: ['Outfit', 'sans-serif'],
+                laila: ['Laila', 'serif'],
             },
         },
     },

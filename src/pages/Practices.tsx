@@ -1,6 +1,7 @@
 import PagePlaceholder from '../components/PagePlaceholder';
 import PracticeCard from '../components/PracticeCard';
 import cardDefaultImg from '../assets/card-default.jpg';
+import NestedDropdown from '../components/NestedDropdown';
 
 export default function Practices() {
     const practices = [
@@ -30,14 +31,21 @@ export default function Practices() {
         },
     ];
 
+    const practiceItems = [
+        { label: 'All Practices', value: 'all' },
+        { label: 'Beginner', value: 'beginner' },
+        { label: 'Intermediate', value: 'intermediate' },
+        { label: 'Advanced', value: 'advanced' },
+    ];
+
     const filters = (
         <div className="flex gap-4">
-            <select className="border border-gray-200 rounded-full px-4 py-1.5 text-sm bg-white outline-none cursor-pointer hover:border-[#3B82F6] transition-colors">
-                <option>All Practices</option>
-                <option>Beginner</option>
-                <option>Intermediate</option>
-                <option>Advanced</option>
-            </select>
+            <NestedDropdown
+                label="All Practices"
+                items={practiceItems}
+                width="320px"
+                className="w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
         </div>
     );
 

@@ -1,6 +1,7 @@
 import PagePlaceholder from '../components/PagePlaceholder';
 import AudioCard from '../components/AudioCard';
 import cardDefaultImg from '../assets/card-default.jpg';
+import NestedDropdown from '../components/NestedDropdown';
 
 export default function Audios() {
     const audios = [
@@ -12,12 +13,21 @@ export default function Audios() {
         { title: "Hari Bin Koi Na Tera", thumbnail: cardDefaultImg },
     ];
 
+    const audioItems = [
+        { label: 'All', value: 'all' },
+        { label: 'Kirtan', value: 'kirtan' },
+        { label: 'Bhajan', value: 'bhajan' },
+    ];
+
     const filters = (
-        <select className="border border-[#E5E7EB] rounded-full px-5 py-2 text-sm bg-white outline-none cursor-pointer hover:border-[#3B82F6] transition-colors text-[#1E3A8A]">
-            <option>All</option>
-            <option>Kirtan</option>
-            <option>Bhajan</option>
-        </select>
+        <div className="flex gap-4">
+            <NestedDropdown
+                label="All"
+                items={audioItems}
+                width="223px"
+                className="w-[223px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
+        </div>
     );
 
     return (

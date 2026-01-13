@@ -1,6 +1,7 @@
 import PagePlaceholder from '../components/PagePlaceholder';
 import GlobalEventCard from '../components/GlobalEventCard';
 import globalEventImg from '../assets/global-event.png';
+import NestedDropdown from '../components/NestedDropdown';
 
 export default function Events() {
     const events = [
@@ -15,14 +16,51 @@ export default function Events() {
         { date: "October 27, 2024", title: "Vichran | Vadodara, India", location: "Gujarat, India", image: globalEventImg },
     ];
 
+    const yearItems = [
+        {
+            label: '2025',
+            value: '2025',
+            children: [
+                { label: 'January', value: '01' },
+                { label: 'February', value: '02' },
+                { label: 'March', value: '03' }
+            ]
+        },
+        {
+            label: '2024',
+            value: '2024',
+            children: [
+                { label: 'December', value: '12' },
+                { label: 'November', value: '11' }
+            ]
+        },
+        { label: '2023', value: '2023' },
+        { label: '2022', value: '2022' },
+        { label: '2021', value: '2021' },
+        { label: '2020', value: '2020' },
+    ];
+
+    const categoryItems = [
+        { label: 'All Category', value: 'all' },
+        { label: 'Medical', value: 'medical' },
+        { label: 'Spiritual', value: 'spiritual' },
+        { label: 'Social', value: 'social' },
+    ];
+
     const filters = (
         <div className="flex gap-4">
-            <select className="border border-[#E5E7EB] rounded-full px-5 py-2 text-sm bg-white outline-none cursor-pointer hover:border-[#3B82F6] transition-colors text-[#1E3A8A]">
-                <option>2025</option>
-                <option>2024</option>
-                <option>2023</option>
-                <option>2022</option>
-            </select>
+            <NestedDropdown
+                label="2025"
+                items={yearItems}
+                width="223px"
+                className="w-[131px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
+            <NestedDropdown
+                label="All Category"
+                items={categoryItems}
+                width="320px"
+                className="w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
         </div>
     );
 

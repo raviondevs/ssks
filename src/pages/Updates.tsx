@@ -1,6 +1,7 @@
 import PagePlaceholder from '../components/PagePlaceholder';
 import EventCard from '../components/EventCard';
 import cardDefaultImg from '../assets/card-default.jpg';
+import NestedDropdown from '../components/NestedDropdown';
 
 export default function Updates() {
     const updates = [
@@ -42,16 +43,30 @@ export default function Updates() {
         },
     ];
 
+    const yearItems = [
+        { label: '2025', value: '2025' },
+        { label: '2024', value: '2024' },
+    ];
+
+    const categoryItems = [
+        { label: 'All Category', value: 'all' },
+        { label: 'Satsang', value: 'satsang' },
+    ];
+
     const filters = (
         <div className="flex gap-4">
-            <select className="border border-gray-200 rounded-full px-4 py-1.5 text-sm bg-white outline-none">
-                <option>2025</option>
-                <option>2024</option>
-            </select>
-            <select className="border border-gray-200 rounded-full px-4 py-1.5 text-sm bg-white outline-none">
-                <option>All Category</option>
-                <option>Satsang</option>
-            </select>
+            <NestedDropdown
+                label="2025"
+                items={yearItems}
+                width="223px"
+                className="w-[131px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
+            <NestedDropdown
+                label="All Category"
+                items={categoryItems}
+                width="320px"
+                className="w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
         </div>
     );
 

@@ -1,6 +1,7 @@
 import PagePlaceholder from '../components/PagePlaceholder';
 import VideoCard from '../components/VideoCard';
 import cardDefaultImg from '../assets/card-default.jpg';
+import NestedDropdown from '../components/NestedDropdown';
 
 export default function Satsang() {
     const videos = [
@@ -15,14 +16,21 @@ export default function Satsang() {
         { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "01:05", thumbnail: cardDefaultImg },
     ];
 
+    const categoryItems = [
+        { label: 'All Category', value: 'all' },
+        { label: 'Latest Satsang', value: 'latest' },
+        { label: 'Spiritual', value: 'spiritual' },
+        { label: 'Casual', value: 'casual' },
+    ];
+
     const filters = (
         <div className="flex gap-4">
-            <select className="border border-[#E5E7EB] rounded-full px-5 py-2 text-sm bg-white outline-none cursor-pointer hover:border-[#3B82F6] transition-colors text-[#1E3A8A]">
-                <option>All Category</option>
-                <option>Latest Satsang</option>
-                <option>Spiritual</option>
-                <option>Casual</option>
-            </select>
+            <NestedDropdown
+                label="All Category"
+                items={categoryItems}
+                width="320px"
+                className="w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
         </div>
     );
 
