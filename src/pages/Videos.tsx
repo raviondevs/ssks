@@ -2,6 +2,7 @@ import PagePlaceholder from '../components/PagePlaceholder';
 import VideoCard from '../components/VideoCard';
 import cardDefaultImg from '../assets/card-default.jpg';
 import NestedDropdown from '../components/NestedDropdown';
+import Pagination from '../components/Pagination';
 
 export default function Videos() {
     const videos = [
@@ -49,22 +50,7 @@ export default function Videos() {
             </div>
 
             {/* Pagination */}
-            <div className="flex items-center justify-center gap-2 mt-12">
-                <button className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-[#3B82F6]">
-                    &lt;
-                </button>
-                <button className="w-8 h-8 flex items-center justify-center text-[#3B82F6] font-medium">1</button>
-                <button className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-[#3B82F6]">2</button>
-                <button className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-[#3B82F6]">3</button>
-                <button className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-[#3B82F6]">4</button>
-                <button className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-[#3B82F6]">5</button>
-                <span className="text-gray-400">...</span>
-                <button className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-[#3B82F6]">10</button>
-                <button className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-[#3B82F6]">11</button>
-                <button className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-[#3B82F6]">
-                    &gt;
-                </button>
-            </div>
+            <Pagination className="mt-12" />
         </PagePlaceholder>
     );
 }

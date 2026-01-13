@@ -1,11 +1,16 @@
 import { useState } from 'react';
 import { Search, Menu } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import MegaMenu from './MegaMenu';
 import logo from '../assets/logo.png';
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
+    const isHome = location.pathname === '/';
+    const navbarTitle = isHome
+        ? "SSKS - Swaminarayan Sanstha"
+        : "Swaminarayan Sukhmay Karan Satsang - SSKS";
 
     return (
         <>
@@ -16,8 +21,8 @@ export default function Navbar() {
                         <div className="w-16 h-16 flex items-center justify-center">
                             <img src={logo} alt="SSKS Logo" className="w-full h-full object-contain" />
                         </div>
-                        <span className="text-[#D32F2F] text-2xl font-bold tracking-tight">
-                            SSKS-Swaminarayan Sanstha
+                        <span className="font-katibeh font-[400] text-[47px] leading-[20px] tracking-[0%] text-[#E21E25]">
+                            {navbarTitle}
                         </span>
                     </Link>
 
