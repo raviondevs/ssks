@@ -93,6 +93,7 @@ export default {
                     900: "#78350F",
                     950: "#451A03",
                 },
+                'ssks-blue': '#005382',
             },
             maxWidth: {
                 'container': '1440px',

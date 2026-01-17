@@ -7,6 +7,7 @@ interface PagePlaceholderProps {
     contentTitle: string;
     filterComponent?: React.ReactNode;
     children: React.ReactNode;
+    className?: string;
 }
 
 const PagePlaceholder: React.FC<PagePlaceholderProps> = ({
@@ -14,10 +15,11 @@ const PagePlaceholder: React.FC<PagePlaceholderProps> = ({
     heroDescription = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
     contentTitle,
     filterComponent,
-    children
+    children,
+    className = "bg-white"
 }) => {
     return (
-        <div className="w-full bg-white font-outfit -mt-[132px]">
+        <div className={`w-full font-outfit -mt-[132px] ${className}`}>
             {/* Top Hero Section */}
             <div
                 className="w-full h-[437.87px] flex flex-col items-center justify-start pt-[172px] px-[100px] pb-[100px] gap-[60px]"
@@ -45,15 +47,17 @@ const PagePlaceholder: React.FC<PagePlaceholderProps> = ({
             {/* Middle Content Section */}
             <div className="w-full max-w-[1440px] mx-auto px-[120px] pb-[100px] flex flex-col gap-[80px]">
                 <div className="w-full max-w-[1200px] mx-auto">
-                    {/* Filter Bar */}
-                    <div className="w-full h-[52px] flex items-center justify-between  mb-8">
-                        <h2 className="text-[64px] leading-[62px] font-[400] text-[#005382] font-katibeh tracking-[0%]">
-                            {contentTitle}
-                        </h2>
-                        <div className="flex items-center gap-4">
-                            {filterComponent}
+                    {/* Filter Bar - Only render if title or filter present */}
+                    {(contentTitle || filterComponent) && (
+                        <div className="w-full h-[52px] flex items-center justify-between mb-8">
+                            <h2 className="text-[64px] leading-[62px] font-[400] text-[#005382] font-katibeh tracking-[0%]">
+                                {contentTitle}
+                            </h2>
+                            <div className="flex items-center gap-4">
+                                {filterComponent}
+                            </div>
                         </div>
-                    </div>
+                    )}
 
                     {/* Dynamic Content */}
                     <div className="w-full">

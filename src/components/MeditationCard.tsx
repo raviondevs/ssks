@@ -1,42 +1,37 @@
+import React from 'react';
 import { Play } from 'lucide-react';
 
 interface MeditationCardProps {
-    thumbnail: string;
+    image: string;
     title: string;
-    onPlayClick?: () => void;
+    onClick?: () => void;
 }
 
-export default function MeditationCard({ thumbnail, title, onPlayClick }: MeditationCardProps) {
+const MeditationCard: React.FC<MeditationCardProps> = ({ image, title, onClick }) => {
     return (
-        <div className="flex flex-col items-center gap-4">
-            <div
-                className="relative bg-white overflow-hidden group cursor-pointer hover:-translate-y-1 transition-transform duration-300"
-                style={{
-                    width: '370px',
-                    height: '247px',
-                    borderRadius: '36px',
-                    boxShadow: '6px 6px 0px 0px #005382',
-                    filter: 'drop-shadow(0 0 0 0)' // Reset any filters if inherited
-                }}
-                onClick={onPlayClick}
-            >
+        <div className="flex flex-col gap-4 w-[370px] cursor-pointer group" onClick={onClick}>
+            {/* Image Container */}
+            <div className="relative w-[370px] h-[247px] rounded-[36px] bg-white shadow-[6px_6px_0px_0px_#005382] overflow-hidden border border-gray-100 transition-transform hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#005382]">
                 <img
-                    src={thumbnail}
+                    src={image}
                     alt={title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                 />
 
-                {/* Play Overlay */}
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                    <div className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center backdrop-blur-sm bg-white/10 hover:bg-white/20 transition-colors">
-                        <Play size={28} className="text-white ml-1" fill="white" />
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
+                    <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center backdrop-blur-sm bg-white/20">
+                        <Play fill="white" className="text-white ml-1" size={32} />
                     </div>
                 </div>
             </div>
 
-            <h3 className="text-[#005382] font-katibeh text-3xl tracking-wide text-center">
+            {/* Title */}
+            <h3 className="font-katibeh text-[40px] leading-[37px] font-[400] text-center text-ssks-blue">
                 {title}
             </h3>
         </div>
     );
-}
+};
+
+export default MeditationCard;
