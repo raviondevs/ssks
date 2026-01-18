@@ -5,10 +5,10 @@ import deityImage from '../assets/deity.png';
 import dailyDarshanImg from '../assets/daily-darshan.jpg';
 import upcomingEventImg from '../assets/upcoming-event-img.png';
 import satsangFrame from '../assets/satsang-frame.png';
-import { TitleDecorationLeft, TitleDecorationRight } from '../components/TitleDecoration';
 import templeFrame from '../assets/temple-frame.png';
 import founderImage from '../assets/founder-image.png';
 import SatsangUpdateImage from '../components/SatsangUpdateImage';
+import SectionTitle from '../components/SectionTitle';
 
 
 export default function Home() {
@@ -58,13 +58,7 @@ export default function Home() {
             {/* Daily Darshan Section (Section 2) */}
             <section className="w-full max-w-[1440px] mx-auto pt-[100px] pb-[100px] px-[100px] flex flex-col items-center gap-[60px]">
                 {/* Text Container */}
-                <div className="w-full max-w-[1240px] flex items-center justify-center gap-[10px] p-[10px]">
-                    <TitleDecorationLeft />
-                    <h2 className="font-katibeh font-[400] text-[64px] leading-[62px] text-[#005382] text-center">
-                        DAILY DARSHAN
-                    </h2>
-                    <TitleDecorationRight />
-                </div>
+                <SectionTitle title="DAILY DARSHAN" color="#005382" />
 
                 {/* Image and Text Wrapper */}
                 <div className="w-full max-w-[1240px] flex flex-col items-center gap-[20px]">
@@ -91,13 +85,7 @@ export default function Home() {
             {/* Upcoming Event Section */}
             <section className="w-full bg-white py-16">
                 <div className="w-full max-w-[1440px] mx-auto px-8 flex flex-col items-center">
-                    <div className="flex items-center justify-center gap-4 mb-16">
-                        <TitleDecorationLeft />
-                        <h2 className="font-katibeh font-[400] text-[64px] leading-[62px] text-[#005382] text-center">
-                            UPCOMING EVENT
-                        </h2>
-                        <TitleDecorationRight />
-                    </div>
+                    <SectionTitle title="UPCOMING EVENT" color="#005382" className="mb-16" />
 
                     {/* Slider Container */}
                     <div className="flex items-center justify-center gap-8 w-full max-w-[1300px]">
@@ -165,13 +153,7 @@ export default function Home() {
 
             {/* Satsang Update Section */}
             <section className="w-full max-w-[1440px] mx-auto px-[100px] pb-[100px] pt-[20px] flex flex-col items-center gap-[60px]">
-                <div className="flex items-center justify-center gap-[10px] p-[10px]">
-                    <TitleDecorationLeft />
-                    <h2 className="font-katibeh font-[400] text-[64px] leading-[62px] text-[#005382] text-center">
-                        SATSANG UPDATE
-                    </h2>
-                    <TitleDecorationRight />
-                </div>
+                <SectionTitle title="SATSANG UPDATE" color="#005382" />
 
                 <div className="w-full flex justify-center gap-[96px]">
                     {/* Left Column (Images) */}
@@ -275,13 +257,7 @@ export default function Home() {
             {/* PHOTO & VIDEO Section */}
             <section className="w-full max-w-[1440px] mx-auto px-[100px] py-[100px] flex flex-col items-center gap-[60px]">
                 {/* Title */}
-                <div className="flex items-center justify-center gap-[10px] p-[10px] text-[#C65300]">
-                    <TitleDecorationLeft />
-                    <h2 className="font-katibeh font-[400] text-[64px] leading-[62px] text-center">
-                        PHOTO & VIDEO
-                    </h2>
-                    <TitleDecorationRight />
-                </div>
+                <SectionTitle title="PHOTO & VIDEO" color="#C65300" />
 
                 {/* Cards Container */}
                 <div className="flex justify-center flex-wrap gap-[50px] w-full max-w-[1186px]">
@@ -365,13 +341,7 @@ export default function Home() {
             {/* DAILY SATSANG SABHA Section */}
             <section className="w-full max-w-[1440px] mx-auto py-[100px] flex flex-col items-center gap-[80px] overflow-hidden">
                 {/* Title */}
-                <div className="flex items-center justify-center gap-[10px] p-[10px]">
-                    <TitleDecorationLeft />
-                    <h2 className="font-katibeh font-[400] text-[64px] leading-[62px] text-[#005382] text-center">
-                        DAILY SATSANG SABHA
-                    </h2>
-                    <TitleDecorationRight />
-                </div>
+                <SectionTitle title="DAILY SATSANG SABHA" color="#005382" />
 
                 {/* Slider Container */}
                 <div className="relative w-full flex items-center">
@@ -456,13 +426,7 @@ export default function Home() {
             {/* SOCIAL ACTIVITY Section */}
             <section className="w-full max-w-[1440px] mx-auto px-[100px] py-[100px] flex flex-col items-center gap-[60px]">
                 {/* Title */}
-                <div className="flex items-center justify-center gap-[10px] p-[10px] text-[#038972]">
-                    <TitleDecorationLeft />
-                    <h2 className="font-katibeh font-[400] text-[64px] leading-[62px] text-center">
-                        Social Activity
-                    </h2>
-                    <TitleDecorationRight />
-                </div>
+                <SectionTitle title="Social Activity" color="#038972" />
 
                 {/* Cards Container */}
                 <div className="flex justify-center flex-wrap gap-[40px] w-full max-w-[1240px]">
@@ -553,13 +517,7 @@ export default function Home() {
             {/* GURUDEV BABJI PHOTO & VIDEO Section */}
             <section className="w-full max-w-[1440px] mx-auto py-[100px] flex flex-col items-center gap-[80px] overflow-hidden">
                 {/* Title */}
-                <div className="flex items-center justify-center gap-[10px] p-[10px] text-[#C65300]">
-                    <TitleDecorationLeft />
-                    <h2 className="font-katibeh font-[400] text-[64px] leading-[62px] text-center">
-                        GURUDEV BABJI PHOTO & VIDEO
-                    </h2>
-                    <TitleDecorationRight />
-                </div>
+                <SectionTitle title="GURUDEV BABJI PHOTO & VIDEO" color="#C65300" />
 
                 {/* Slider Container */}
                 <div className="relative w-full flex items-center justify-center">
@@ -672,13 +630,7 @@ export default function Home() {
             {/* FOUNDER & SUCCESSORS Section */}
             <section className="w-full max-w-[1440px] mx-auto py-[100px] flex flex-col items-center gap-[80px] overflow-hidden">
                 {/* Title */}
-                <div className="flex items-center justify-center gap-[10px] p-[10px] text-[#005382]">
-                    <TitleDecorationLeft />
-                    <h2 className="font-katibeh font-[400] text-[64px] leading-[62px] text-center">
-                        FOUNDER & SUCCESSORS
-                    </h2>
-                    <TitleDecorationRight />
-                </div>
+                <SectionTitle title="FOUNDER & SUCCESSORS" color="#005382" />
 
                 {/* Slider Container */}
                 <div className="relative w-full flex items-center justify-center">
@@ -802,13 +754,7 @@ export default function Home() {
             {/* GALLERY Section */}
             <section className="w-full max-w-[1440px] mx-auto py-[100px] flex flex-col items-center gap-[80px]">
                 {/* Title */}
-                <div className="flex items-center justify-center gap-[10px] p-[10px] text-[#038972]">
-                    <TitleDecorationLeft />
-                    <h2 className="font-katibeh font-[400] text-[64px] leading-[62px] text-center uppercase">
-                        Gallery
-                    </h2>
-                    <TitleDecorationRight />
-                </div>
+                <SectionTitle title="Gallery" color="#038972" />
 
                 {/* Categories Grid */}
                 <div className="flex justify-center items-center gap-[40px] w-full flex-wrap px-[100px]">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TitleDecorationLeft, TitleDecorationRight } from './TitleDecoration';
+import SectionTitle from './SectionTitle';
 
 interface PagePlaceholderProps {
     heroTitle: string;
@@ -29,13 +29,11 @@ const PagePlaceholder: React.FC<PagePlaceholderProps> = ({
             >
                 <div className="w-full max-w-[1200px] flex flex-col items-center gap-[12px]">
                     {/* Header Title with Arrows */}
-                    <div className="flex items-center justify-center gap-[10px] p-[10px] text-[#323232]">
-                        <TitleDecorationLeft />
-                        <h1 className="font-katibeh text-[64px] leading-[62px] font-[400] text-center tracking-[0%]">
-                            {heroTitle}
-                        </h1>
-                        <TitleDecorationRight />
-                    </div>
+                    <SectionTitle
+                        title={heroTitle}
+                        color="#323232"
+                        titleClassName="!leading-[62px]"
+                    />
 
                     {/* Hero Description */}
                     <p className="max-w-[700px] text-center text-[#323232] text-[18px] leading-[24px] tracking-[0.015em]">
