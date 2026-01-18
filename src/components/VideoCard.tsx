@@ -1,4 +1,4 @@
-interface VideoCardProps {
+interface VideoCardProps extends React.HTMLAttributes<HTMLDivElement> {
     thumbnail: string;
     title: string;
     date: string;
@@ -6,10 +6,10 @@ interface VideoCardProps {
     onPlayClick?: () => void;
 }
 
-export default function VideoCard({ thumbnail, title, date, duration, onPlayClick }: VideoCardProps) {
+export default function VideoCard({ thumbnail, title, date, duration, onPlayClick, className, style, ...props }: VideoCardProps) {
     return (
         <div
-            className="bg-white flex flex-col hover:-translate-y-1 transition-transform duration-300"
+            className={`bg-white flex flex-col hover:-translate-y-1 transition-transform duration-300 ${className || ''}`}
             style={{
                 width: '360px',
                 height: '326px',
@@ -17,8 +17,10 @@ export default function VideoCard({ thumbnail, title, date, duration, onPlayClic
                 borderRadius: '18px',
                 border: '1px solid #E5E7EB', // Subtle border for definition
                 boxShadow: '6px 6px 0px 0px #005382',
-                gap: '22px'
+                gap: '22px',
+                ...style
             }}
+            {...props}
         >
             {/* Image Section */}
             <div className="w-full h-[200px] shrink-0 rounded-[12px] overflow-hidden relative group cursor-pointer" onClick={onPlayClick}>

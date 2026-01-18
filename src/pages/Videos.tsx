@@ -1,20 +1,24 @@
+import { useState } from 'react';
 import PagePlaceholder from '../components/PagePlaceholder';
 import VideoCard from '../components/VideoCard';
 import cardDefaultImg from '../assets/card-default.jpg';
 import NestedDropdown from '../components/NestedDropdown';
 import Pagination from '../components/Pagination';
+import VideoModal from '../components/VideoModal';
 
 export default function Videos() {
+    const [selectedVideo, setSelectedVideo] = useState<{ url: string; title: string } | null>(null);
+
     const videos = [
-        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "10:05", thumbnail: cardDefaultImg },
-        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "10:05", thumbnail: cardDefaultImg },
-        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "10:05", thumbnail: cardDefaultImg },
-        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "12:15", thumbnail: cardDefaultImg },
-        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "12:15", thumbnail: cardDefaultImg },
-        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "12:15", thumbnail: cardDefaultImg },
-        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "15:30", thumbnail: cardDefaultImg },
-        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "15:30", thumbnail: cardDefaultImg },
-        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "15:30", thumbnail: cardDefaultImg },
+        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "10:05", thumbnail: cardDefaultImg, videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "10:05", thumbnail: cardDefaultImg, videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "10:05", thumbnail: cardDefaultImg, videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "12:15", thumbnail: cardDefaultImg, videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "12:15", thumbnail: cardDefaultImg, videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "12:15", thumbnail: cardDefaultImg, videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "15:30", thumbnail: cardDefaultImg, videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "15:30", thumbnail: cardDefaultImg, videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+        { date: "October 19, 2024", title: "Vichran | Vadodara, India", duration: "15:30", thumbnail: cardDefaultImg, videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
     ];
 
     const categoryItems = [
@@ -45,12 +49,24 @@ export default function Videos() {
         >
             <div className="flex flex-wrap gap-8 justify-center mt-8">
                 {videos.map((video, index) => (
-                    <VideoCard key={index} {...video} />
+                    <VideoCard
+                        key={index}
+                        {...video}
+                        onPlayClick={() => setSelectedVideo({ url: video.videoUrl, title: video.title })}
+                    />
                 ))}
             </div>
 
             {/* Pagination */}
             <Pagination className="mt-12" />
+
+            {/* Video Modal */}
+            <VideoModal
+                isOpen={!!selectedVideo}
+                onClose={() => setSelectedVideo(null)}
+                videoUrl={selectedVideo?.url}
+                title={selectedVideo?.title}
+            />
         </PagePlaceholder>
     );
 }

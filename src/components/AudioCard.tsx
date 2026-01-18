@@ -1,16 +1,21 @@
 import { Play } from 'lucide-react';
+import React from 'react';
 
-interface AudioCardProps {
+interface AudioCardProps extends React.HTMLAttributes<HTMLDivElement> {
     thumbnail: string;
     title: string;
     onPlayClick?: () => void;
 }
 
-export default function AudioCard({ thumbnail, title, onPlayClick }: AudioCardProps) {
+export default function AudioCard({ thumbnail, title, onPlayClick, className, style, ...props }: AudioCardProps) {
     return (
-        <div className="flex flex-col items-center gap-6">
+        <div
+            className={`flex flex-col items-center gap-6 ${className || ''}`}
+            style={style}
+            {...props}
+        >
             <div
-                className="relative cursor-pointer group hover:scale-105 transition-transform duration-300"
+                className="relative cursor-pointer group hover:scale-105 transition-transform duration-300 w-full flex justify-center"
                 style={{
                     filter: 'drop-shadow(6px 6px 0px #005382)'
                 }}
@@ -18,10 +23,10 @@ export default function AudioCard({ thumbnail, title, onPlayClick }: AudioCardPr
             >
                 {/* Hexagon Shape */}
                 <div
-                    className="relative bg-white overflow-hidden"
+                    className="relative bg-white overflow-hidden aspect-[386/334]"
                     style={{
-                        width: '386px',
-                        height: '334.35px',
+                        width: '100%',
+                        maxWidth: '386px',
                         clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
                     }}
                 >
