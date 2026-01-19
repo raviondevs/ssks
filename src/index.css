@@ -10,10 +10,13 @@
   background-color: #ffffff;
 }
 
+html,
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .max-container {
@@ -26,4 +29,13 @@ body {
   height: 92px;
   backdrop-filter: blur(25.94856834411621px);
   border-radius: 126.04px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

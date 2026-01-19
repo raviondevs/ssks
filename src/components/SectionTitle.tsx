@@ -14,7 +14,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ title, color, className = "
             className={`flex items-center justify-center gap-[10px] p-[10px] w-full ${className}`}
             style={{ color: color }}
         >
-            <div className="flex items-center justify-center shrink-0">
+            <div className="flex items-center justify-center pt-[13px] shrink-0">
                 <TitleDecorationLeft />
             </div>
 
@@ -30,7 +30,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ title, color, className = "
                 {title}
             </h2>
 
-            <div className="flex items-center justify-center shrink-0">
+            <div className="flex items-center pt-[13px] justify-center shrink-0">
                 <TitleDecorationRight />
             </div>
         </div>

@@ -7,7 +7,7 @@ export default function MainLayout() {
     const isHomePage = location.pathname === '/';
 
     return (
-        <div className="min-height-screen flex flex-col">
+        <div className="min-h-screen flex flex-col overflow-x-hidden">
             <Navbar />
             <main className={`flex-grow ${isHomePage ? '' : 'pt-[140px]'}`}>
                 <Outlet />
