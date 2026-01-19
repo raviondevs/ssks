@@ -216,10 +216,18 @@ export default function Home() {
                                         gap: '18px'
                                     }}
                                 >
-                                    <div className="w-full h-[220px] flex justify-center">
-                                        <SatsangUpdateImage
+                                    <div
+                                        className="overflow-hidden"
+                                        style={{
+                                            width: '391px',
+                                            height: '218px',
+                                            borderRadius: '12px'
+                                        }}
+                                    >
+                                        <img
                                             src={upcomingEventImg}
-                                            className="h-full w-auto transition-transform duration-500 group-hover:scale-105"
+                                            alt={item.title}
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                         />
                                     </div>
                                     <h3 className="font-katibeh text-[32px] leading-[32px] text-[#038972] text-center">
