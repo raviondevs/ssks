@@ -436,9 +436,14 @@ export default function Home() {
                                         >
                                             {/* Inner Image Container */}
                                             <div
-                                                className="absolute inset-[12px] overflow-hidden"
+                                                className="absolute inset-0 overflow-hidden"
                                                 style={{
-                                                    clipPath: 'polygon(11% 2%, 89% 2%, 92% 10%, 92% 22%, 97% 30%, 97% 70%, 92% 78%, 92% 90%, 89% 98%, 11% 98%, 8% 90%, 8% 78%, 3% 70%, 3% 30%, 8% 22%, 8% 10%)'
+                                                    WebkitMaskImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 967 478' preserveAspectRatio='none'%3E%3Cpath d='M832,1 H132 C129,1 128,6 128,22 V40 C128,44 126,44 115,44 C106,44 83,58 83,97 V120 C83,124 80,124 67,118 C64,118 52,124 52,143 C52,165 42,184 31,200 C25,208 1,238 1,238 C1,238 25,268 31,276 C42,292 52,311 52,333 C52,346 64,358 67,358 C80,358 83,358 83,358 V379 C83,405 91,418 98,425 C106,432 115,432 125,432 V436 C125,445 128,454 128,454 V454 C128,465 130,471 131,473 C132,475 134,475 134,475 H832 C832,475 834,475 835,473 C836,471 838,465 838,454 V436 C838,432 840,432 850,432 C860,432 882,418 882,379 V357 C882,354 885,353 886,353 L898,358 C901,359 904,356 907,356 C913,344 913,333 913,333 C913,311 923,292 934,276 C946,261 951,254 964,238 C964,238 940,200 934,200 C923,184 913,165 913,143 C913,130 910,124 907,121 C904,118 899,118 899,118 L886,123 C884,123 882,121 882,119 V97 C882,71 875,58 867,51 C860,44 851,44 850,44 H840 C839,44 838,42 838,40 V22 C838,11 836,6 835,3 C834,1 832,1 832,1 Z' fill='white'/%3E%3C/svg%3E")`,
+                                                    maskImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 967 478' preserveAspectRatio='none'%3E%3Cpath d='M832,1 H132 C129,1 128,6 128,22 V40 C128,44 126,44 115,44 C106,44 83,58 83,97 V120 C83,124 80,124 67,118 C64,118 52,124 52,143 C52,165 42,184 31,200 C25,208 1,238 1,238 C1,238 25,268 31,276 C42,292 52,311 52,333 C52,346 64,358 67,358 C80,358 83,358 83,358 V379 C83,405 91,418 98,425 C106,432 115,432 125,432 V436 C125,445 128,454 128,454 V454 C128,465 130,471 131,473 C132,475 134,475 134,475 H832 C832,475 834,475 835,473 C836,471 838,465 838,454 V436 C838,432 840,432 850,432 C860,432 882,418 882,379 V357 C882,354 885,353 886,353 L898,358 C901,359 904,356 907,356 C913,344 913,333 913,333 C913,311 923,292 934,276 C946,261 951,254 964,238 C964,238 940,200 934,200 C923,184 913,165 913,143 C913,130 910,124 907,121 C904,118 899,118 899,118 L886,123 C884,123 882,121 882,119 V97 C882,71 875,58 867,51 C860,44 851,44 850,44 H840 C839,44 838,42 838,40 V22 C838,11 836,6 835,3 C834,1 832,1 832,1 Z' fill='white'/%3E%3C/svg%3E")`,
+                                                    WebkitMaskSize: '100% 100%',
+                                                    maskSize: '100% 100%',
+                                                    WebkitMaskRepeat: 'no-repeat',
+                                                    maskRepeat: 'no-repeat'
                                                 }}
                                             >
                                                 <img
@@ -676,10 +681,10 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* FOUNDER & SUCCESSORS Section */}
-            <section
+            < section
                 className="w-full py-[100px] relative overflow-hidden"
                 style={{
                     background: 'linear-gradient(180deg, #E8F7FF 0%, #FFF5F5 15%, #FFF5F5 85%, #E8F7FF 100%)'
@@ -798,56 +803,164 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* GALLERY Section */}
             <section className="w-full bg-[#E8F7FF] overflow-hidden">
-                <div className="max-w-container mx-auto px-4 md:px-[100px] py-[100px] flex flex-col items-center gap-[80px]">
+                <div className="max-w-container mx-auto px-4 py-[100px] flex flex-col items-center gap-[60px]">
                     {/* Title */}
                     <SectionTitle title="Gallery" color="#038972" />
 
-                    {/* Categories Grid */}
-                    <div className="flex justify-center items-center gap-[40px] w-full flex-wrap px-[100px]">
+                    {/* Categories Grid Container */}
+                    <div
+                        className="flex justify-between items-center w-full max-w-[1240px] mx-auto"
+                        style={{
+                            height: '388.93px',
+                        }}
+                    >
                         {[
-                            { label: "IMAGE", icon: LucideImage },
-                            { label: "VIDEO", icon: Play },
-                            { label: "AUDIO", icon: Volume2 }
+                            {
+                                label: "IMAGE",
+                                icon: (
+                                    <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <foreignObject x="-10.0571" y="-15.0571" width="134.114" height="134.114">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: 'blur(15.03px)', clipPath: 'url(#bgblur_img_clip)', height: '100%', width: '100%' }}></div>
+                                        </foreignObject>
+                                        <g filter="url(#filter_img)" data-figma-bg-blur-radius="30.0571">
+                                            <rect x="21" y="16" width="72" height="72" rx="36" fill="#323232" fillOpacity="0.3" shapeRendering="crispEdges" />
+                                            <rect x="21" y="16" width="72" height="72" rx="36" stroke="white" strokeWidth="2" shapeRendering="crispEdges" />
+                                            <path d="M71 34H43C40.7909 34 39 35.7909 39 38V66C39 68.2091 40.7909 70 43 70H71C73.2091 70 75 68.2091 75 66V38C75 35.7909 73.2091 34 71 34Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M50 47.7846C51.6569 47.7846 53 46.4622 53 44.8308C53 43.1994 51.6569 41.877 50 41.877C48.3431 41.877 47 43.1994 47 44.8308C47 46.4622 48.3431 47.7846 50 47.7846Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M75 57.6313L65 47.7852L43 69.4467" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter_img" x="-10.0571" y="-15.0571" width="134.114" height="134.114" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="10" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                                            </filter>
+                                            <clipPath id="bgblur_img_clip" transform="translate(10.0571 15.0571)">
+                                                <rect x="21" y="16" width="72" height="72" rx="36" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                )
+                            },
+                            {
+                                label: "VIDEO",
+                                icon: (
+                                    <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <foreignObject x="-10.0571" y="-15.0571" width="134.114" height="134.114">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: 'blur(15.03px)', clipPath: 'url(#bgblur_video_clip)', height: '100%', width: '100%' }}></div>
+                                        </foreignObject>
+                                        <g filter="url(#filter_video)" data-figma-bg-blur-radius="30.0571">
+                                            <rect x="21" y="16" width="72" height="72" rx="36" fill="#323232" fillOpacity="0.3" shapeRendering="crispEdges" />
+                                            <rect x="21" y="16" width="72" height="72" rx="36" stroke="white" strokeWidth="2" shapeRendering="crispEdges" />
+                                            <path d="M48 38L66 52L48 66V38Z" fill="white" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter_video" x="-10.0571" y="-15.0571" width="134.114" height="134.114" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="10" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                                            </filter>
+                                            <clipPath id="bgblur_video_clip" transform="translate(10.0571 15.0571)">
+                                                <rect x="21" y="16" width="72" height="72" rx="36" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                )
+                            },
+                            {
+                                label: "AUDIO",
+                                icon: (
+                                    <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <foreignObject x="-10.0571" y="-15.0571" width="134.114" height="134.114">
+                                            <div xmlns="http://www.w3.org/1999/xhtml" style={{ backdropFilter: 'blur(15.03px)', clipPath: 'url(#bgblur_audio_clip)', height: '100%', width: '100%' }}></div>
+                                        </foreignObject>
+                                        <g filter="url(#filter_audio)" data-figma-bg-blur-radius="30.0571">
+                                            <rect x="21" y="16" width="72" height="72" rx="36" fill="#323232" fillOpacity="0.3" shapeRendering="crispEdges" />
+                                            <rect x="21" y="16" width="72" height="72" rx="36" stroke="white" strokeWidth="2" shapeRendering="crispEdges" />
+                                            <path d="M55 38L45 46H37V58H45L55 66V38Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M71.1401 38C74.8895 41.7506 76.9958 46.8367 76.9958 52.14C76.9958 57.4433 74.8895 62.5294 71.1401 66.28M64.0801 45.06C65.9548 46.9353 67.0079 49.4784 67.0079 52.13C67.0079 54.7816 65.9548 57.3247 64.0801 59.2" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter_audio" x="-10.0571" y="-15.0571" width="134.114" height="134.114" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                                <feOffset dy="5" />
+                                                <feGaussianBlur stdDeviation="10" />
+                                                <feComposite in2="hardAlpha" operator="out" />
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0" />
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                                            </filter>
+                                            <clipPath id="bgblur_audio_clip" transform="translate(10.0571 15.0571)">
+                                                <rect x="21" y="16" width="72" height="72" rx="36" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                )
+                            }
                         ].map((category, index) => (
-                            <div key={index} className="flex flex-col items-center gap-6 group cursor-pointer">
-                                {/* Hexagon Shape Container */}
-                                <div className="relative w-[340px] h-[360px] flex items-center justify-center transition-transform duration-500 group-hover:-translate-y-2">
-                                    {/* Green Border Hexagon (Background) */}
-                                    <div
-                                        className="absolute inset-0 bg-[#038972]"
-                                        style={{
-                                            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
-                                        }}
-                                    />
-
-                                    {/* Inner Image Hexagon (Clipped) */}
-                                    <div
-                                        className="absolute inset-[4px] bg-white overflow-hidden"
-                                        style={{
-                                            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
-                                        }}
-                                    >
-                                        <img
-                                            src={dailyDarshanImg}
-                                            alt={category.label}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            <div key={index} className="flex flex-col items-center gap-6 group cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+                                {/* Hexagon Container */}
+                                <div
+                                    className="relative flex items-center justify-center p-2"
+                                    style={{
+                                        width: '386px',
+                                        height: '335px',
+                                    }}
+                                >
+                                    <svg width="386" height="335" viewBox="0 0 386 335" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                                        {/* Teal Shadow Path (Offset) */}
+                                        <path
+                                            d="M89.6259 11.9976C93.9157 4.57345 101.84 0.00184418 110.415 0.00483786L275.702 0.0625466C284.276 0.0655403 292.198 4.64268 296.482 12.0698L379.076 155.242C383.361 162.669 383.357 171.817 379.068 179.242L296.374 322.356C292.084 329.78 284.16 334.351 275.585 334.348L110.298 334.291C101.724 334.288 93.8022 329.711 89.5176 322.283L6.92401 179.112C2.63942 171.684 2.64261 162.536 6.93239 155.112L89.6259 11.9976Z"
+                                            fill="#038972"
+                                            transform="translate(6, 4)"
                                         />
 
-                                        {/* Overlay with Icon */}
-                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                                            <div className="w-20 h-20 bg-black/30 backdrop-blur-md rounded-full border-2 border-white/50 flex items-center justify-center text-white scale-90 group-hover:scale-100 transition-transform">
-                                                <category.icon size={40} strokeWidth={1.5} />
-                                            </div>
-                                        </div>
+                                        {/* Mask for the image */}
+                                        <defs>
+                                            <mask id={`mask-${index}`} maskUnits="userSpaceOnUse">
+                                                <path d="M89.6259 11.9976C93.9157 4.57345 101.84 0.00184418 110.415 0.00483786L275.702 0.0625466C284.276 0.0655403 292.198 4.64268 296.482 12.0698L379.076 155.242C383.361 162.669 383.357 171.817 379.068 179.242L296.374 322.356C292.084 329.78 284.16 334.351 275.585 334.348L110.298 334.291C101.724 334.288 93.8022 329.711 89.5176 322.283L6.92401 179.112C2.63942 171.684 2.64261 162.536 6.93239 155.112L89.6259 11.9976Z" fill="white" />
+                                            </mask>
+                                        </defs>
+
+                                        {/* Image wrapped in mask */}
+                                        <g mask={`url(#mask-${index})`}>
+                                            <foreignObject x="0" y="0" width="386" height="335">
+                                                <div className="w-full h-full relative">
+                                                    <img
+                                                        src={dailyDarshanImg}
+                                                        alt={category.label}
+                                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                                    />
+                                                    {/* Dark overlay on hover */}
+                                                    <div className="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition-colors" />
+                                                </div>
+                                            </foreignObject>
+                                        </g>
+                                    </svg>
+
+                                    {/* Centered Icon - Outside SVG Mask to avoid clipping */}
+                                    <div className="relative z-10 scale-100 group-hover:scale-110 transition-transform duration-300">
+                                        {category.icon}
                                     </div>
                                 </div>
 
                                 {/* Label */}
-                                <h3 className="font-outfit font-bold text-[24px] text-[#038972] tracking-[0.05em]">
+                                <h3 className="font-katibeh text-[40px] leading-none text-[#038972] tracking-[0.05em] uppercase">
                                     {category.label}
                                 </h3>
                             </div>
