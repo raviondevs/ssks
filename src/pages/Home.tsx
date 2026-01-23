@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Image as LucideImage, Play, Volume
 import heroBackground from '../assets/hero-background.jpg';
 import deityImage from '../assets/deity.png';
 import dailyDarshanImg from '../assets/daily-darshan.jpg';
-import upcomingEventImg from '../assets/upcoming-event-img.png';
+import upcomingEventImg from '../assets/upcoming-event-img-2.png';
 import satsangFrame from '../assets/satsang-frame.png';
 import templeFrame from '../assets/temple-frame.png';
 import founderImage from '../assets/founder-image.png';

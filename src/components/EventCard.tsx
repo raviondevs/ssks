@@ -22,10 +22,7 @@ export default function EventCard({ image, date, title, location, onViewClick }:
         >
             {/* Left Image Section - Using the provided SVG component */}
             <div className="absolute top-0 left-0 h-full flex items-center  ">
-                <SatsangUpdateImage
-                    src={image}
-                    className="  w-auto transition-transform    "
-                />
+
             </div>
 
             {/* Right Side Container */}
