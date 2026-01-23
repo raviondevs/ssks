@@ -93,9 +93,9 @@ export default function Home() {
                     <SectionTitle title="DAILY DARSHAN" color="#005382" />
 
                     {/* Image and Text Wrapper */}
-                    <div className="w-full max-w-[1240px] flex flex-col items-center gap-[20px]">
+                    <div className="w-full max-w-[1240px] flex flex-col items-center gap-[20px] ">
                         {/* Inside Container */}
-                        <div className="flex flex-col items-center gap-[10px] pb-[18px]" style={{ width: '763px', maxWidth: '100%' }}>
+                        <div className="flex flex-col items-center bg-white  pb-[18px]" style={{ width: '763px', borderRadius: '18px', maxWidth: '100%' }}>
                             <img
                                 src={dailyDarshanImg}
                                 alt="Daily Darshan"
@@ -107,7 +107,7 @@ export default function Home() {
                                     maxWidth: '100%'
                                 }}
                             />
-                            <p className="font-katibeh font-[400] text-[40px] leading-[32px] text-[#005382] text-center capitalize mt-2">
+                            <p className="font-katibeh font-[400] text-[40px] leading-[32px] text-[#005382] text-center capitalize ">
                                 Daily Darshan
                             </p>
                         </div>
