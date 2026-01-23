@@ -60,7 +60,7 @@ export default function Home() {
     return (
         <div className="w-full bg-white font-outfit">
             {/* Hero Section */}
-            <section className="relative w-full max-w-container mx-auto h-[900px] overflow-hidden -mt-[132px]">
+            <section className="relative w-full  h-[1000px] overflow-hidden">
                 {/* Background Image */}
                 <img
                     src={heroBackground}
@@ -79,7 +79,7 @@ export default function Home() {
 
                 {/* Professional Bottom Gradient - Seamless transition */}
                 <div
-                    className="absolute bottom-0 left-0 right-0 h-[400px] z-20 pointer-events-none"
+                    className="absolute top-[55rem] bottom-0 left-0 right-0 h-[131px] z-20 pointer-events-none"
                     style={{
                         background: 'linear-gradient(180deg, rgba(232, 247, 255, 0) 0%, rgba(232, 247, 255, 0.8) 50%, #E8F7FF 100%)',
                     }}
