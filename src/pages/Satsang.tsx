@@ -29,12 +29,12 @@ export default function Satsang() {
     ];
 
     const filters = (
-        <div className="flex gap-4">
+        <div className="flex gap-4 w-full justify-center md:justify-start">
             <NestedDropdown
                 label="All Category"
                 items={categoryItems}
                 width="320px"
-                className="w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+                className="w-full max-w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
             />
         </div>
     );
@@ -45,7 +45,7 @@ export default function Satsang() {
             contentTitle="Latest Satsang"
             filterComponent={filters}
         >
-            <div className="flex flex-wrap gap-8 justify-center mt-8">
+            <div className="flex flex-wrap gap-4 md:gap-8 justify-center mt-8">
                 {videos.map((video, index) => (
                     <VideoCard
                         key={index}
@@ -56,7 +56,7 @@ export default function Satsang() {
             </div>
 
             {/* Pagination */}
-            <Pagination className="mt-12" />
+            <Pagination className="mt-8 md:mt-12" />
 
             {/* Video Modal */}
             <VideoModal

@@ -19,12 +19,14 @@ export default function Calendar() {
     ];
 
     const filters = (
-        <NestedDropdown
-            label="Month"
-            items={monthItems}
-            width="200px"
-            className="w-[180px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
-        />
+        <div className="w-full flex justify-center md:justify-start">
+            <NestedDropdown
+                label="Month"
+                items={monthItems}
+                width="200px"
+                className="w-full max-w-[180px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+            />
+        </div>
     );
 
     return (

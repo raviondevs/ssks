@@ -11,78 +11,43 @@ interface EventCardProps {
 export default function EventCard({ image, date, title, location, onViewClick }: EventCardProps) {
     return (
         <div
-            className="bg-white overflow-hidden flex transition-all duration-300 relative group"
-            style={{
-                width: '580px',
-                height: '302.126953125px',
-                borderRadius: '52.85px',
-                boxShadow: '8.81px 8.81px 0px 0px #005382',
-                opacity: 1,
-            }}
+            className="bg-white overflow-hidden flex flex-col md:flex-row transition-all duration-300 relative group w-full max-w-[580px] h-auto md:h-[302px] rounded-[30px] md:rounded-[52.85px] shadow-[6px_6px_0px_0px_#005382] md:shadow-[8.81px_8.81px_0px_0px_#005382]"
         >
             {/* Left Image Section - Using the provided SVG component */}
-            <div className="absolute top-0 left-0 h-full flex items-center  ">
+            {/* Left Image Section */}
+            <div className="relative md:absolute top-0 left-0 w-full h-[200px] md:w-auto md:h-full flex items-center justify-center md:block overflow-hidden md:overflow-visible">
                 <SatsangUpdateImage
                     src={image}
-                    className="  w-auto transition-transform    "
+                    className="w-full h-full object-cover md:w-auto md:h-auto"
                 />
             </div>
 
             {/* Right Side Container */}
+            {/* Right Side Container */}
             <div
-                className="absolute flex flex-col items-start gap-4"
-                style={{
-                    width: '227.98193359375px',
-                    height: '181px',
-                    top: '60.5px',
-                    left: '326.73px',
-                }}
+                className="relative md:absolute flex flex-col items-start gap-4 p-6 md:p-0 md:w-[227px] md:h-[181px] md:top-[60.5px] md:left-[326px]"
             >
                 {/* Date / Title Text */}
+                {/* Date / Title Text */}
                 <span
-                    className="w-full text-left"
-                    style={{
-                        fontFamily: 'Katibeh, serif',
-                        fontWeight: 400,
-                        fontSize: '24px',
-                        lineHeight: '24px', // Adjusted from 64px to fit mockup better
-                        color: '#005382',
-                    }}
+                    className="w-full text-left font-katibeh font-normal text-[24px] leading-[24px] text-[#005382]"
                 >
                     {date}
                 </span>
 
                 {/* Description Text */}
+                {/* Description Text */}
                 <p
-                    className="line-clamp-3 text-left w-full"
-                    style={{
-                        fontFamily: 'Outfit, sans-serif', // Fallback for Basis Grotesque Arabic Pro
-                        fontWeight: 400,
-                        fontSize: '18px',
-                        lineHeight: '24px',
-                        letterSpacing: '0.015em',
-                        color: '#57534E',
-                        margin: 0
-                    }}
+                    className="line-clamp-3 text-left w-full font-outfit font-normal text-[18px] leading-[24px] tracking-[0.015em] text-[#57534E] m-0"
                 >
                     {title} | {location}
                 </p>
 
                 {/* View More Button */}
+                {/* View More Button */}
                 <button
                     onClick={onViewClick}
-                    className="flex items-center justify-center text-white transition-all active:scale-95"
-                    style={{
-                        width: '94px',
-                        height: '40px',
-                        borderRadius: '8px',
-                        background: '#F34743',
-                        padding: '8px 30px',
-                        fontSize: '16px',
-                        fontWeight: 'bold',
-                        border: 'none',
-                        cursor: 'pointer'
-                    }}
+                    className="flex items-center justify-center text-white transition-all active:scale-95 w-[94px] h-[40px] rounded-[8px] bg-[#F34743] px-[30px] py-[8px] text-[16px] font-bold border-none cursor-pointer"
                 >
                     View
                 </button>

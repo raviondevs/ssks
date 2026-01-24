@@ -48,18 +48,18 @@ export default function Events() {
     ];
 
     const filters = (
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4 w-full justify-center md:justify-start">
             <NestedDropdown
                 label="2025"
                 items={yearItems}
                 width="223px"
-                className="w-[131px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+                className="w-full md:w-[131px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
             />
             <NestedDropdown
                 label="All Category"
                 items={categoryItems}
                 width="320px"
-                className="w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+                className="w-full md:w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
             />
         </div>
     );
@@ -70,7 +70,7 @@ export default function Events() {
             contentTitle="Global Event"
             filterComponent={filters}
         >
-            <div className="flex flex-wrap gap-8 justify-center mt-8">
+            <div className="flex flex-wrap gap-4 md:gap-8 justify-center mt-8">
                 {events.map((event, index) => (
                     <GlobalEventCard
                         key={index}
@@ -80,7 +80,7 @@ export default function Events() {
             </div>
 
             {/* Pagination */}
-            <div className="flex items-center justify-center gap-2 mt-12">
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-8 md:mt-12">
                 <button className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-[#3B82F6]">
                     &lt;
                 </button>

@@ -9,9 +9,9 @@ interface MeditationCardProps {
 
 const MeditationCard: React.FC<MeditationCardProps> = ({ image, title, onClick }) => {
     return (
-        <div className="flex flex-col gap-4 w-[370px] cursor-pointer group" onClick={onClick}>
+        <div className="flex flex-col gap-4 w-full max-w-[370px] cursor-pointer group" onClick={onClick}>
             {/* Image Container */}
-            <div className="relative w-[370px] h-[247px] rounded-[36px] bg-white shadow-[6px_6px_0px_0px_#005382] overflow-hidden border border-gray-100 transition-transform hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#005382]">
+            <div className="relative w-full h-auto aspect-[370/247] rounded-[36px] bg-white shadow-[6px_6px_0px_0px_#005382] overflow-hidden border border-gray-100 transition-transform hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#005382]">
                 <img
                     src={image}
                     alt={title}

@@ -33,7 +33,7 @@ export default function Meditation() {
                 </div>
             }
         >
-            <div className="flex flex-wrap justify-center gap-x-[40px] gap-y-[60px]">
+            <div className="flex flex-wrap justify-center gap-8 md:gap-x-[40px] md:gap-y-[60px]">
                 {meditationData.map((item) => (
                     <MeditationCard
                         key={item.id}

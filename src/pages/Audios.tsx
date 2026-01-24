@@ -25,19 +25,19 @@ export default function Audios() {
     ];
 
     const filters = (
-        <div className="flex gap-4">
+        <div className="flex gap-4 w-full justify-center md:justify-start">
             <NestedDropdown
                 label="All"
                 items={audioItems}
                 width="223px"
-                className="w-[223px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+                className="w-full max-w-[223px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
             />
         </div>
     );
 
     return (
         <PagePlaceholder heroTitle="Audio" contentTitle="Kirtan" filterComponent={filters}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8 justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mt-8 justify-items-center">
                 {audios.map((audio, i) => (
                     <AudioCard
                         key={i}
@@ -47,7 +47,7 @@ export default function Audios() {
                     />
                 ))}
             </div>
-            <Pagination className="mt-12" />
+            <Pagination className="mt-8 md:mt-12" />
 
             {/* Audio/Video Player Modal */}
             <VideoModal

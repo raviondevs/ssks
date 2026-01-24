@@ -8,10 +8,8 @@ interface PracticeCardProps {
 export default function PracticeCard({ thumbnail, title, onClick }: PracticeCardProps) {
     return (
         <div
-            className="bg-white flex flex-col items-center hover:-translate-y-1 transition-transform duration-300 cursor-pointer overflow-hidden pb-4"
+            className="bg-white flex flex-col items-center hover:-translate-y-1 transition-transform duration-300 cursor-pointer overflow-hidden pb-4 w-full max-w-[365px] h-auto aspect-[365/401]"
             style={{
-                width: '365px',
-                height: '401px',
                 borderTopLeftRadius: '177.37px',
                 borderTopRightRadius: '177.37px',
                 borderBottomRightRadius: '13.3px',

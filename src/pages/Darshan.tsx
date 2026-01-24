@@ -3,10 +3,9 @@ import DatePickerDropdown from '../components/DatePickerDropdown';
 
 export default function Darshan() {
     const filters = (
-        <div className="flex gap-4">
+        <div className="flex gap-4 w-full justify-center md:justify-start">
             <DatePickerDropdown
-                width="358px"
-                className="w-[358px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+                className="w-full max-w-[358px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
             />
         </div>
     );
@@ -17,15 +16,15 @@ export default function Darshan() {
             contentTitle="7 April 2025 (Thursday)"
             filterComponent={filters}
         >
-            <div className="flex flex-col items-center mt-12">
-                <div className="relative w-[600px] h-[800px] rounded-[40px] overflow-hidden shadow-2xl border-8 border-white">
+            <div className="flex flex-col items-center mt-8 md:mt-12">
+                <div className="relative w-full max-w-[600px] h-auto aspect-[3/4] md:h-[800px] rounded-[20px] md:rounded-[40px] overflow-hidden shadow-2xl border-4 md:border-8 border-white">
                     <img
                         src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&q=80&w=1200"
                         alt="Bhagwan Swaminarayan"
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <h3 className="mt-8 text-[#1E3A8A] font-katibeh text-[40px]">Bhagwan Swaminarayan</h3>
+                <h3 className="mt-6 md:mt-8 text-[#1E3A8A] font-katibeh text-[32px] md:text-[40px]">Bhagwan Swaminarayan</h3>
             </div>
         </PagePlaceholder>
     );

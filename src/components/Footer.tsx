@@ -5,14 +5,14 @@ export default function Footer() {
     return (
         <footer className="w-full flex flex-col">
             <div
-                className="w-full text-white pt-[70px] px-[100px] pb-10 min-h-[405px] box-border"
+                className="w-full text-white py-10 px-5 md:pt-[70px] md:px-[100px] md:pb-10 min-h-auto md:min-h-[405px] box-border"
                 style={{
                     background: 'linear-gradient(90deg, rgba(50, 50, 50, 0.9) -8.74%, rgba(5, 14, 30, 0.9) -8.73%, rgba(18, 32, 66, 0.9) 105.96%)'
                 }}
             >
-                <div className="max-w-[1440px] mx-auto flex flex-wrap justify-center gap-[135px]">
+                <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row md:flex-wrap items-start md:justify-center gap-10 md:gap-[135px]">
                     {/* Contact Info - Left Column */}
-                    <div className="flex flex-col gap-[35px] w-[358px]">
+                    <div className="flex flex-col gap-[35px] w-full md:w-[358px]">
                         <div className="flex gap-4 items-start">
                             <MapPin className="shrink-0 text-white" size={24} strokeWidth={1.5} />
                             <p className="text-sm leading-relaxed text-white">
@@ -45,7 +45,7 @@ export default function Footer() {
                     </div>
 
                     {/* Our Websites - Middle Column */}
-                    <div className="flex flex-col w-[131px]">
+                    <div className="flex flex-col w-full md:w-[131px]">
                         <h3 className="font-bold text-lg mb-[12px] text-white">Our Websites</h3>
                         <div className="flex flex-col gap-[8px]">
                             <FooterLink to="/darshan">Darshan</FooterLink>
@@ -60,7 +60,7 @@ export default function Footer() {
                     </div>
 
                     {/* Quick Links - Right Column */}
-                    <div className="flex flex-col w-[174px]">
+                    <div className="flex flex-col w-full md:w-[174px]">
                         <h3 className="font-bold text-lg mb-[12px] text-white">Quick Links</h3>
                         <div className="flex flex-col gap-[8px]">
                             <FooterLink to="/terms">Terms & Condition</FooterLink>
@@ -76,10 +76,9 @@ export default function Footer() {
 
             {/* Copyright Section */}
             <div
-                className="w-full flex items-center justify-center text-white font-laila font-medium text-[12px] leading-[20px] tracking-[-0.01em]"
+                className="w-full flex items-center justify-center text-white font-laila font-medium text-[12px] leading-[20px] tracking-[-0.01em] p-4 text-center"
                 style={{
                     backgroundColor: '#DA4B4F',
-                    padding: '10px 33.33px',
                     gap: '8.33px'
                 }}
             >

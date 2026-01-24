@@ -54,18 +54,18 @@ export default function Updates() {
     ];
 
     const filters = (
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4 w-full justify-center md:justify-start">
             <NestedDropdown
                 label="2025"
                 items={yearItems}
                 width="223px"
-                className="w-[131px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+                className="w-full md:w-[131px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
             />
             <NestedDropdown
                 label="All Category"
                 items={categoryItems}
                 width="320px"
-                className="w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+                className="w-full md:w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
             />
         </div>
     );

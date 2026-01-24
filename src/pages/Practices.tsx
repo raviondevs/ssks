@@ -39,12 +39,12 @@ export default function Practices() {
     ];
 
     const filters = (
-        <div className="flex gap-4">
+        <div className="flex gap-4 w-full justify-center md:justify-start">
             <NestedDropdown
                 label="All Practices"
                 items={practiceItems}
                 width="320px"
-                className="w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
+                className="w-full max-w-[320px] h-[52px] rounded-[35px] pl-[20px] pr-[12px] py-[10px]"
             />
         </div>
     );
@@ -55,7 +55,7 @@ export default function Practices() {
             contentTitle="Daily Practices"
             filterComponent={filters}
         >
-            <div className="flex flex-wrap gap-12 mt-12 justify-center">
+            <div className="flex flex-wrap gap-8 md:gap-12 mt-8 md:mt-12 justify-center">
                 {practices.map((practice, index) => (
                     <PracticeCard key={index} {...practice} />
                 ))}
