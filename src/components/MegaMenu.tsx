@@ -1,4 +1,4 @@
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     RefreshCw,
@@ -6,28 +6,28 @@ import {
     Image as ImageIcon,
     Play,
     Clock,
-    Mic2,
+    Mic,
     Wind,
     BookOpen,
     Calendar,
     Bell,
     Download,
-    X
+    X,
 } from 'lucide-react';
 import logo from '../assets/logo.png';
 
 const features = [
-    { id: 'updates', name: 'Updates', icon: RefreshCw, color: 'bg-[#F5F3FF]', iconColor: 'text-[#7C3AED]', path: '/updates' },
-    { id: 'darshan', name: 'Darshan', icon: Heart, color: 'bg-[#FFF1F2]', iconColor: 'text-[#E11D48]', path: '/darshan' },
-    { id: 'events', name: 'Events', icon: ImageIcon, color: 'bg-[#F0FDF4]', iconColor: 'text-[#16A34A]', path: '/events' },
-    { id: 'videos', name: 'Videos', icon: Play, color: 'bg-[#FFF7ED]', iconColor: 'text-[#EA580C]', path: '/videos' },
-    { id: 'satsang', name: '5 Minutes', icon: Clock, color: 'bg-[#EFF6FF]', iconColor: 'text-[#2563EB]', path: '/satsang' },
-    { id: 'audios', name: 'Audios', icon: Mic2, color: 'bg-[#F0FDF4]', iconColor: 'text-[#166534]', path: '/audios' },
-    { id: 'meditation', name: 'Meditation', icon: Wind, color: 'bg-[#FFF1F2]', iconColor: 'text-[#BE123C]', path: '/meditation' },
-    { id: 'publication', name: 'Publication', icon: BookOpen, color: 'bg-[#FEFCE8]', iconColor: 'text-[#A16207]', path: '/publication' },
-    { id: 'calendar', name: 'Calendar', icon: Calendar, color: 'bg-[#FFF7ED]', iconColor: 'text-[#C2410C]', path: '/calendar' },
-    { id: 'practices', name: 'Practices', icon: Bell, color: 'bg-[#F0F9FF]', iconColor: 'text-[#0369A1]', path: '/practices' },
-    { id: 'download', name: 'Download', icon: Download, color: 'bg-[#FFF1F2]', iconColor: 'text-[#E11D48]', path: '/download' },
+    { id: 'updates', name: 'Updates', icon: RefreshCw, color: 'bg-[#F0EEFF]', iconColor: 'text-[#6366F1]', path: '/updates' },
+    { id: 'darshan', name: 'Darshan', icon: Heart, color: 'bg-[#FFF1F7]', iconColor: 'text-[#DB2777]', path: '/darshan' },
+    { id: 'events', name: 'Events', icon: ImageIcon, color: 'bg-[#E6FFFA]', iconColor: 'text-[#059669]', path: '/events' },
+    { id: 'videos', name: 'Videos', icon: Play, color: 'bg-[#FFF5F5]', iconColor: 'text-[#E53E3E]', path: '/videos' },
+    { id: 'minutes', name: '5 Minutes', icon: Clock, color: 'bg-[#EBF8FF]', iconColor: 'text-[#3182CE]', path: '/satsang' },
+    { id: 'audios', name: 'Audios', icon: Mic, color: 'bg-[#F0FFF4]', iconColor: 'text-[#38A169]', path: '/audios' },
+    { id: 'meditation', name: 'Meditation', icon: Wind, color: 'bg-[#FFF1F7]', iconColor: 'text-[#D53F8C]', path: '/meditation' },
+    { id: 'publication', name: 'Publication', icon: BookOpen, color: 'bg-[#F0FFF4]', iconColor: 'text-[#38A169]', path: '/publication' },
+    { id: 'calendar', name: 'Calendar', icon: Calendar, color: 'bg-[#FFF5F5]', iconColor: 'text-[#E53E3E]', path: '/calendar' },
+    { id: 'practices', name: 'Practices', icon: Bell, color: 'bg-[#EBF8FF]', iconColor: 'text-[#3182CE]', path: '/practices' },
+    { id: 'download', name: 'Download', icon: Download, color: 'bg-[#FFF1F7]', iconColor: 'text-[#DB2777]', path: '/download' },
 ];
 
 interface MegaMenuProps {
@@ -42,74 +42,65 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
         <AnimatePresence>
             {isOpen && (
                 <motion.div
-                    initial={{ opacity: 0, y: '100%' }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: '100%' }}
-                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                    className="fixed inset-0 bg-white z-[200] flex flex-col overflow-y-auto"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[200] flex items-center justify-center p-4"
                 >
-                    {/* Menu Header (Replaces Navbar) */}
-                    <header className="w-full max-w-container mx-auto px-8 h-[92px] flex items-center justify-between sticky top-0 bg-white/80 backdrop-blur-md z-[210]">
-                        <Link to="/" onClick={onClose} className="flex items-center gap-4">
-                            <div className="w-16 h-16">
-                                <img src={logo} alt="SSKS Logo" className="w-full h-full object-contain" />
-                            </div>
-                            <span className="text-[#D32F2F] text-2xl font-bold tracking-tight">
-                                SSKS-Swaminarayan Sanstha
-                            </span>
-                        </Link>
+                    <motion.div
+                        initial={{ scale: 0.95, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0.95, opacity: 0 }}
+                        className="w-full max-w-[1240px] bg-white rounded-[40px] shadow-2xl overflow-hidden relative"
+                    >
+                        {/* Close Button Header */}
+                        <div className="absolute top-6 right-6 z-10">
+                            <button
+                                onClick={onClose}
+                                className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-50 text-gray-400 hover:bg-gray-100 transition-all border border-gray-100"
+                            >
+                                <X size={24} />
+                            </button>
+                        </div>
 
-                        <button
-                            onClick={onClose}
-                            className="w-14 h-14 flex items-center justify-center rounded-full bg-error-50 text-error-600 hover:bg-error-100 transition-all transform active:scale-95 group"
-                        >
-                            <X size={32} className="group-hover:rotate-90 transition-transform duration-300" />
-                        </button>
-                    </header>
-
-                    {/* Menu Content */}
-                    <div className="flex-grow flex items-center justify-center py-20">
-                        <div className="w-full max-w-container mx-auto px-8">
-
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-12 gap-y-16">
+                        {/* Content Area */}
+                        <div className="px-6 py-12 md:px-12 md:py-20 lg:px-20">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
                                 {features.map((feature, index) => (
                                     <motion.button
                                         key={feature.id}
-                                        initial={{ opacity: 0, scale: 0.8 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        transition={{ delay: 0.1 + index * 0.03 }}
+                                        initial={{ opacity: 0, y: 15 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: index * 0.04 }}
                                         onClick={() => {
                                             navigate(feature.path);
                                             onClose();
                                         }}
-                                        className="flex flex-col items-center gap-6 group"
+                                        className="bg-white border border-gray-50 rounded-[28px] p-6 flex flex-col items-center gap-5 shadow-[0px_0px_7.9px_0px_#00000014] hover:shadow-[0_15px_45px_rgb(0,0,0,0.08)] transition-all transform hover:-translate-y-1 group group-active:scale-95"
                                     >
-                                        <div className="relative">
-                                            <div className={`w-32 h-32 rounded-[2.5rem] ${feature.color} flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-2xl relative z-10`}>
-                                                <feature.icon className={`${feature.iconColor} transition-transform duration-500 group-hover:scale-110`} size={48} />
-                                            </div>
-                                            <div className={`absolute -bottom-4 inset-x-4 h-12 blur-3xl opacity-0 group-hover:opacity-40 transition-all duration-500 ${feature.color} rounded-full -z-10`} />
+                                        {/* Icon Circle */}
+                                        <div className={`w-20 h-20 rounded-full ${feature.color} flex items-center justify-center transition-all duration-300 group-hover:scale-105`}>
+                                            <feature.icon className={`${feature.iconColor}`} size={30} />
                                         </div>
-                                        <span className="font-serif text-xl font-bold text-grey-800 group-hover:text-primary-600 transition-colors uppercase tracking-widest text-center">
+
+                                        {/* Label */}
+                                        <span className="font-serif text-lg font-bold text-gray-800 tracking-tight text-center">
                                             {feature.name}
                                         </span>
                                     </motion.button>
                                 ))}
                             </div>
                         </div>
-                    </div>
 
-                    {/* Footer info in Menu */}
-                    <div className="py-12 border-t border-grey-100 mt-auto">
-                        <div className="max-w-container mx-auto px-8 flex justify-between items-center text-grey-400 font-medium">
-                            <p>© 2026 SSKS Swaminarayan Sanstha. All rights reserved.</p>
-                            <div className="flex gap-8">
-                                <a href="#" className="hover:text-primary-600 transition-colors">Privacy</a>
-                                <a href="#" className="hover:text-primary-600 transition-colors">Terms</a>
-                                <a href="#" className="hover:text-primary-600 transition-colors">Contact</a>
+                        {/* Minimal Footer */}
+                        <div className="bg-gray-50/50 px-12 py-6 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-gray-50">
+                            <div className="flex items-center gap-3">
+                                <img src={logo} alt="Logo" className="h-6 w-auto" />
+                                <span className="text-gray-400 font-medium text-xs md:text-sm">SSKS Swaminarayan Sanstha</span>
                             </div>
+                            <p className="text-gray-300 text-xs font-normal">© 2026 SSKS-Swaminarayan Sanstha</p>
                         </div>
-                    </div>
+                    </motion.div>
                 </motion.div>
             )}
         </AnimatePresence>
