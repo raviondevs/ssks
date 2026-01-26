@@ -1,33 +1,33 @@
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-    RefreshCw,
-    Heart,
-    Image as ImageIcon,
-    Play,
-    Clock,
-    Mic,
-    Wind,
-    BookOpen,
-    Calendar,
-    Bell,
-    Download,
-    X,
-} from 'lucide-react';
+    UpdatesIcon,
+    DarshanIcon,
+    EventsIcon,
+    VideosIcon,
+    FiveMinutesIcon,
+    AudiosIcon,
+    MeditationIcon,
+    PublicationIcon,
+    CalendarIcon,
+    PracticesIcon,
+    DownloadIcon
+} from './MenuIcons';
+import { X } from 'lucide-react';
 import logo from '../assets/logo.png';
 
 const features = [
-    { id: 'updates', name: 'Updates', icon: RefreshCw, color: 'bg-[#F0EEFF]', iconColor: 'text-[#6366F1]', path: '/updates' },
-    { id: 'darshan', name: 'Darshan', icon: Heart, color: 'bg-[#FFF1F7]', iconColor: 'text-[#DB2777]', path: '/darshan' },
-    { id: 'events', name: 'Events', icon: ImageIcon, color: 'bg-[#E6FFFA]', iconColor: 'text-[#059669]', path: '/events' },
-    { id: 'videos', name: 'Videos', icon: Play, color: 'bg-[#FFF5F5]', iconColor: 'text-[#E53E3E]', path: '/videos' },
-    { id: 'minutes', name: '5 Minutes', icon: Clock, color: 'bg-[#EBF8FF]', iconColor: 'text-[#3182CE]', path: '/satsang' },
-    { id: 'audios', name: 'Audios', icon: Mic, color: 'bg-[#F0FFF4]', iconColor: 'text-[#38A169]', path: '/audios' },
-    { id: 'meditation', name: 'Meditation', icon: Wind, color: 'bg-[#FFF1F7]', iconColor: 'text-[#D53F8C]', path: '/meditation' },
-    { id: 'publication', name: 'Publication', icon: BookOpen, color: 'bg-[#F0FFF4]', iconColor: 'text-[#38A169]', path: '/publication' },
-    { id: 'calendar', name: 'Calendar', icon: Calendar, color: 'bg-[#FFF5F5]', iconColor: 'text-[#E53E3E]', path: '/calendar' },
-    { id: 'practices', name: 'Practices', icon: Bell, color: 'bg-[#EBF8FF]', iconColor: 'text-[#3182CE]', path: '/practices' },
-    { id: 'download', name: 'Download', icon: Download, color: 'bg-[#FFF1F7]', iconColor: 'text-[#DB2777]', path: '/download' },
+    { id: 'updates', name: 'Updates', icon: UpdatesIcon, color: 'bg-[#E5DBFC]', path: '/updates' },
+    { id: 'darshan', name: 'Darshan', icon: DarshanIcon, color: 'bg-[#FFD1EE]', path: '/darshan' },
+    { id: 'events', name: 'Events', icon: EventsIcon, color: 'bg-[#DEFCBE]', path: '/events' },
+    { id: 'videos', name: 'Videos', icon: VideosIcon, color: 'bg-[#FED7C9]', path: '/videos' },
+    { id: 'minutes', name: '5 Minutes', icon: FiveMinutesIcon, color: 'bg-[#E2E2FA]', path: '/satsang' },
+    { id: 'audios', name: 'Audios', icon: AudiosIcon, color: 'bg-[#DEFCBE]', path: '/audios' },
+    { id: 'meditation', name: 'Meditation', icon: MeditationIcon, color: 'bg-[#FFD1EE]', path: '/meditation' },
+    { id: 'publication', name: 'Publication', icon: PublicationIcon, color: 'bg-[#DEFCBE]', path: '/publication' },
+    { id: 'calendar', name: 'Calendar', icon: CalendarIcon, color: 'bg-[#FED7C9]', path: '/calendar' },
+    { id: 'practices', name: 'Practices', icon: PracticesIcon, color: 'bg-[#DCDEFD]', path: '/practices' },
+    { id: 'download', name: 'Download', icon: DownloadIcon, color: 'bg-[#FFD1EE]', path: '/download' },
 ];
 
 interface MegaMenuProps {
@@ -51,7 +51,7 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
                         initial={{ scale: 0.95, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.95, opacity: 0 }}
-                        className="w-full max-w-[1240px] bg-white rounded-[40px] shadow-2xl overflow-hidden relative"
+                        className="w-full max-w-[1400px] bg-white rounded-[40px] shadow-2xl overflow-hidden relative"
                     >
                         {/* Close Button Header */}
                         <div className="absolute top-6 right-6 z-10">
@@ -65,7 +65,7 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
 
                         {/* Content Area */}
                         <div className="px-6 py-12 md:px-12 md:py-20 lg:px-20">
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+                            <div className="flex flex-wrap justify-start gap-6 md:gap-8">
                                 {features.map((feature, index) => (
                                     <motion.button
                                         key={feature.id}
@@ -76,15 +76,22 @@ export default function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
                                             navigate(feature.path);
                                             onClose();
                                         }}
-                                        className="bg-white border border-gray-50 rounded-[28px] p-6 flex flex-col items-center gap-5 shadow-[0px_0px_7.9px_0px_#00000014] hover:shadow-[0_15px_45px_rgb(0,0,0,0.08)] transition-all transform hover:-translate-y-1 group group-active:scale-95"
+                                        className="bg-white border border-[#EEEEEE] flex flex-col items-center shadow-[0px_0px_7.9px_0px_#00000014] hover:shadow-[0_15px_45px_rgb(0,0,0,0.08)] transition-all transform hover:-translate-y-1 group group-active:scale-95 shrink-0"
+                                        style={{
+                                            width: '173.18px',
+                                            height: '190px',
+                                            borderRadius: '15.99px',
+                                            padding: '25px 20px',
+                                            gap: '20px'
+                                        }}
                                     >
                                         {/* Icon Circle */}
                                         <div className={`w-20 h-20 rounded-full ${feature.color} flex items-center justify-center transition-all duration-300 group-hover:scale-105`}>
-                                            <feature.icon className={`${feature.iconColor}`} size={30} />
+                                            <feature.icon />
                                         </div>
 
                                         {/* Label */}
-                                        <span className="font-serif text-lg font-bold text-gray-800 tracking-tight text-center">
+                                        <span className="font-katibeh text-[36px] font-[400] leading-[32px] text-[#000000] text-center capitalize">
                                             {feature.name}
                                         </span>
                                     </motion.button>

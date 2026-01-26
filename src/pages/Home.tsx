@@ -684,10 +684,10 @@ export default function Home() {
             </section >
 
             {/* FOUNDER & SUCCESSORS Section */}
-            < section
-                className="w-full py-[100px] relative overflow-hidden"
+            <section
+                className="w-full py-[100px] relative overflow-hidden shadow-none border-none"
                 style={{
-                    background: 'linear-gradient(180deg, #E8F7FF 0%, #FFF5F5 15%, #FFF5F5 85%, #E8F7FF 100%)'
+                    background: 'linear-gradient(180deg, #E8F7FF 0%, #FFF5F5 15%, #FFF5F5 40%, #F0FDFB 80%, #F0FDFB 100%)'
                 }}
             >
                 <div className="max-w-container mx-auto flex flex-col items-center gap-[80px]">
@@ -707,7 +707,7 @@ export default function Home() {
                         {/* Scroll Area */}
                         <div
                             ref={founderSliderRef}
-                            className="flex gap-[40px] overflow-x-auto py-20 px-[calc(50%-210px)] scroll-smooth no-scrollbar w-full items-center snap-x snap-mandatory"
+                            className="flex gap-[40px] overflow-x-auto py-10 px-[calc(50%-210px)] scroll-smooth no-scrollbar w-full items-center snap-x snap-mandatory"
                             style={{
                                 scrollbarWidth: 'none',
                                 msOverflowStyle: 'none'
@@ -764,11 +764,12 @@ export default function Home() {
                                                 }}
                                             >
                                                 {/* Temple Image and Person Image */}
-                                                <div className="relative w-full h-[550px] flex items-center justify-center">
+                                                {/* Temple Image and Person Image */}
+                                                <div className="relative w-full flex items-center justify-center">
                                                     <img
                                                         src={templeFrame}
                                                         alt="Temple Frame"
-                                                        className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                                                        className="w-full h-auto object-contain pointer-events-none"
                                                     />
                                                     {/* Person Image inside temple frame */}
                                                     <div className="absolute top-[35%] w-[60%] h-[45%] flex items-center justify-center overflow-hidden">
@@ -782,8 +783,7 @@ export default function Home() {
 
                                                 {/* Name Typography */}
                                                 <h3
-                                                    className="mt-6 font-serif text-[28px] font-bold text-[#005382] text-center"
-                                                    style={{ fontFamily: 'Outfit, sans-serif' }}
+                                                    className="mt-[18px] font-katibeh font-[400] text-[48px] leading-[56px] text-[#005382] text-center"
                                                 >
                                                     {item.name}
                                                 </h3>
@@ -803,10 +803,15 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
-            </section >
+            </section>
 
             {/* GALLERY Section */}
-            <section className="w-full bg-[#F0FDFB] overflow-hidden py-[100px]">
+            <section
+                className="w-full overflow-hidden py-[100px] shadow-none border-none"
+                style={{
+                    background: '#F0FDFB'
+                }}
+            >
                 <div className="max-w-container mx-auto px-4 flex flex-col items-center gap-[80px]">
                     {/* Title */}
                     <SectionTitle title="GALLERY" color="#038972" />

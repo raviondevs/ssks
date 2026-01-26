@@ -1,33 +1,33 @@
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-    RefreshCw,
-    Heart,
-    Image as ImageIcon,
-    Play,
-    Clock,
-    Mic2,
-    Wind,
-    BookOpen,
-    Calendar,
-    Bell,
-    Download,
-    X
-} from 'lucide-react';
+    UpdatesIcon,
+    DarshanIcon,
+    EventsIcon,
+    VideosIcon,
+    FiveMinutesIcon,
+    AudiosIcon,
+    MeditationIcon,
+    PublicationIcon,
+    CalendarIcon,
+    PracticesIcon,
+    DownloadIcon
+} from './MenuIcons';
+import { X } from 'lucide-react';
 import logo from '../assets/logo.png';
 
 const features = [
-    { id: 'updates', name: 'Updates', icon: RefreshCw, color: 'bg-[#F5F3FF]', iconColor: 'text-[#7C3AED]', path: '/updates' },
-    { id: 'darshan', name: 'Darshan', icon: Heart, color: 'bg-[#FFF1F2]', iconColor: 'text-[#E11D48]', path: '/darshan' },
-    { id: 'events', name: 'Events', icon: ImageIcon, color: 'bg-[#F0FDF4]', iconColor: 'text-[#16A34A]', path: '/events' },
-    { id: 'videos', name: 'Videos', icon: Play, color: 'bg-[#FFF7ED]', iconColor: 'text-[#EA580C]', path: '/videos' },
-    { id: 'satsang', name: '5 Minutes', icon: Clock, color: 'bg-[#EFF6FF]', iconColor: 'text-[#2563EB]', path: '/satsang' },
-    { id: 'audios', name: 'Audios', icon: Mic2, color: 'bg-[#F0FDF4]', iconColor: 'text-[#166534]', path: '/audios' },
-    { id: 'meditation', name: 'Meditation', icon: Wind, color: 'bg-[#FFF1F2]', iconColor: 'text-[#BE123C]', path: '/meditation' },
-    { id: 'publication', name: 'Publication', icon: BookOpen, color: 'bg-[#FEFCE8]', iconColor: 'text-[#A16207]', path: '/publication' },
-    { id: 'calendar', name: 'Calendar', icon: Calendar, color: 'bg-[#FFF7ED]', iconColor: 'text-[#C2410C]', path: '/calendar' },
-    { id: 'practices', name: 'Practices', icon: Bell, color: 'bg-[#F0F9FF]', iconColor: 'text-[#0369A1]', path: '/practices' },
-    { id: 'download', name: 'Download', icon: Download, color: 'bg-[#FFF1F2]', iconColor: 'text-[#E11D48]', path: '/download' },
+    { id: 'updates', name: 'Updates', icon: UpdatesIcon, color: 'bg-[#E5DBFC]', path: '/updates' },
+    { id: 'darshan', name: 'Darshan', icon: DarshanIcon, color: 'bg-[#FFD1EE]', path: '/darshan' },
+    { id: 'events', name: 'Events', icon: EventsIcon, color: 'bg-[#DEFCBE]', path: '/events' },
+    { id: 'videos', name: 'Videos', icon: VideosIcon, color: 'bg-[#FED7C9]', path: '/videos' },
+    { id: 'minutes', name: '5 Minutes', icon: FiveMinutesIcon, color: 'bg-[#E2E2FA]', path: '/satsang' },
+    { id: 'audios', name: 'Audios', icon: AudiosIcon, color: 'bg-[#DEFCBE]', path: '/audios' },
+    { id: 'meditation', name: 'Meditation', icon: MeditationIcon, color: 'bg-[#FFD1EE]', path: '/meditation' },
+    { id: 'publication', name: 'Publication', icon: PublicationIcon, color: 'bg-[#DEFCBE]', path: '/publication' },
+    { id: 'calendar', name: 'Calendar', icon: CalendarIcon, color: 'bg-[#FED7C9]', path: '/calendar' },
+    { id: 'practices', name: 'Practices', icon: PracticesIcon, color: 'bg-[#DCDEFD]', path: '/practices' },
+    { id: 'download', name: 'Download', icon: DownloadIcon, color: 'bg-[#FFD1EE]', path: '/download' },
 ];
 
 interface SidebarProps {
@@ -85,10 +85,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                                         }}
                                         className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group w-full text-left"
                                     >
-                                        <div className={`p-2.5 rounded-lg ${feature.color} ${feature.iconColor} group-hover:scale-110 transition-transform`}>
-                                            <feature.icon size={20} />
+                                        <div className={`p-2.5 rounded-lg ${feature.color} group-hover:scale-110 transition-transform`}>
+                                            <feature.icon width={24} height={24} />
                                         </div>
-                                        <span className="font-medium text-gray-700 group-hover:text-gray-900">
+                                        <span className="font-katibeh text-[36px] font-[400] leading-[32px] text-[#000000] capitalize">
                                             {feature.name}
                                         </span>
                                     </button>
