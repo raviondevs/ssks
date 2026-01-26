@@ -109,6 +109,16 @@ export default {
                 outfit: ['Outfit', 'sans-serif'],
                 laila: ['Laila', 'serif'],
             },
+            animation: {
+                'spin-slow': 'spin 3s linear infinite',
+                'draw': 'draw 2s ease-in-out infinite',
+            },
+            keyframes: {
+                draw: {
+                    '0%, 100%': { strokeDashoffset: '400' },
+                    '50%': { strokeDashoffset: '0' },
+                },
+            },
         },
     },
     plugins: [],

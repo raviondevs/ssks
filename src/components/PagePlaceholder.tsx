@@ -18,14 +18,18 @@ const PagePlaceholder: React.FC<PagePlaceholderProps> = ({
     children,
     className = "bg-white"
 }) => {
+    // const isLoading = usePageLoader(1000);
+
+    // if (isLoading) {
+    //     return <PageLoader />;
+    // }
+
     return (
-        <div className={`w-full font-outfit -mt-[80px] md:-mt-[132px] ${className}`}>
+        <div className={`w-full font-outfit -mt-[80px] md:-mt-[132px] ${className}`} style={{ background: 'linear-gradient(181.28deg, #FFF1EE 18.08%, #E9F7FF 33.21%)' }}>
             {/* Top Hero Section */}
             <div
                 className="w-full h-auto md:h-[437.87px] flex flex-col items-center justify-start pt-[120px] px-4 pb-[60px] md:pt-[172px] md:px-[100px] md:pb-[100px] gap-[40px] md:gap-[60px]"
-                style={{
-                    background: 'linear-gradient(180deg, #FDF2F2 0%, #FFFFFF 100%)',
-                }}
+
             >
                 <div className="w-full max-w-[1200px] flex flex-col items-center gap-[12px]">
                     {/* Header Title with Arrows */}
