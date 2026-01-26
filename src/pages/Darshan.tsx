@@ -1,5 +1,6 @@
 import PagePlaceholder from '../components/PagePlaceholder';
 import DatePickerDropdown from '../components/DatePickerDropdown';
+import dailyDarshanImg from '../assets/daily-darshan.jpg';
 
 export default function Darshan() {
     const filters = (
@@ -17,9 +18,9 @@ export default function Darshan() {
             filterComponent={filters}
         >
             <div className="flex flex-col items-center mt-8 md:mt-12">
-                <div className="relative w-full max-w-[600px] h-auto aspect-[3/4] md:h-[800px] rounded-[20px] md:rounded-[40px] overflow-hidden shadow-2xl border-4 md:border-8 border-white">
+                <div className="relative w-full max-w-[763px] h-auto aspect-[3/4] md:h-[800px] lg:h-[1310px] rounded-[20px] md:rounded-[40px] overflow-hidden shadow-2xl border-4 md:border-8 border-white">
                     <img
-                        src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&q=80&w=1200"
+                        src={dailyDarshanImg}
                         alt="Bhagwan Swaminarayan"
                         className="w-full h-full object-cover"
                     />

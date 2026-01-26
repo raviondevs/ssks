@@ -15,7 +15,7 @@ import Calendar from './pages/Calendar';
 import Practices from './pages/Practices';
 import PracticeDetail from './pages/PracticeDetail';
 import Download from './pages/Download';
-import Images from './pages/Images';
+import Wallpapers from './pages/Images';
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
           <Route path="practices" element={<Practices />} />
           <Route path="practices/:id" element={<PracticeDetail />} />
           <Route path="download" element={<Download />} />
-          <Route path="images" element={<Images />} />
+          <Route path="wallpapers" element={<Wallpapers />} />
         </Route>
       </Routes>
     </Router>
