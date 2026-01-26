@@ -83,10 +83,10 @@ function DropdownMenuItem({ item }: { item: DropdownItem }) {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <div className="w-full h-[40px] flex justify-between items-center px-[30px] py-[6px] hover:bg-[#1E3A8A] hover:text-white cursor-pointer text-[#1E3A8A] font-medium transition-colors border-b border-[#E5E7EB] hover:border-transparent">
-                <span>{item.label}</span>
+            <div className="w-full min-h-[40px] flex justify-between items-center px-4 py-2 hover:bg-[#5FC5FF26] cursor-pointer text-[#005382] font-medium transition-colors border-b border-[#EEEEEE] last:border-0 first:rounded-t-[18px] last:rounded-b-[18px]">
+                <span className="text-[17px]">{item.label}</span>
                 {item.children && (
-                    <ChevronRight size={16} className={`text-[#005382] ${isHovered ? 'text-white' : ''}`} />
+                    <ChevronRight size={18} className="text-[#005382]/60" />
                 )}
             </div>
 
@@ -94,22 +94,22 @@ function DropdownMenuItem({ item }: { item: DropdownItem }) {
             <AnimatePresence>
                 {isHovered && item.children && (
                     <motion.div
-                        initial={{ opacity: 0, x: -10 }}
+                        initial={{ opacity: 0, x: 5 }}
                         animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -10 }}
+                        exit={{ opacity: 0, x: 5 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-0 left-full ml-2 bg-white rounded-[18px] py-[24px] z-50 flex flex-col gap-[18px]"
+                        className="absolute top-0 left-[calc(100%-8px)] bg-white rounded-[18px] shadow-xl z-50 flex flex-col border border-[#EEEEEE]"
                         style={{
-                            width: '223px',
-                            boxShadow: '0px 0px 7px 0px #00000040'
+                            minWidth: '180px',
+                            boxShadow: '0px 8px 24px rgba(0,0,0,0.12)'
                         }}
                     >
                         {item.children.map((child, index) => (
                             <div
                                 key={index}
-                                className="w-full h-[40px] flex justify-between items-center px-[30px] py-[6px] hover:bg-[#1E3A8A] hover:text-white cursor-pointer text-[#1E3A8A] font-medium border-b border-[#E5E7EB] last:border-0"
+                                className="w-full h-[48px] flex items-center px-6 hover:bg-[#5FC5FF26] cursor-pointer text-[#005382] font-medium border-b border-[#EEEEEE] last:border-0 first:rounded-t-[18px] last:rounded-b-[18px] transition-colors"
                             >
-                                <span>{child.label}</span>
+                                <span className="text-[16px]">{child.label}</span>
                             </div>
                         ))}
                     </motion.div>

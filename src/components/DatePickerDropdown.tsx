@@ -1,6 +1,6 @@
 
 import { useState, useRef, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface DatePickerDropdownProps {
@@ -105,15 +105,12 @@ export default function DatePickerDropdown({ width = '358px', className }: DateP
             <button
                 onClick={() => setIsOpen(!isOpen)}
                 className={cn(
-                    "flex justify-between items-center bg-white border border-[#005382] text-[#005382] font-medium text-lg transition-all",
+                    "flex justify-between items-center bg-white border border-[#005382] text-[#005382] font-medium text-lg transition-all px-[20px] gap-4",
                     className
                 )}
             >
                 <span className="truncate">{formatSelectedDate(selectedDate)}</span>
-                <ArrowRight size={24} className={cn("transition-transform duration-300", isOpen ? "rotate-90" : "")} />
-                {/* Image shows an ArrowRight style icon or similar pointing right, referencing the input field design. Wait, user provided field image has arrow right? Or Chevron? 
-                   User said: "field style... width 358...". Image 2 shows "DD/MM/YYYY ->". Arrow points right.
-                */}
+                <ChevronDown size={24} className={cn("transition-transform duration-300 shrink-0", isOpen ? "rotate-180" : "")} />
             </button>
 
             {/* Dropdown Calendar */}
@@ -168,7 +165,7 @@ export default function DatePickerDropdown({ width = '358px', className }: DateP
                                         className={cn(
                                             "h-8 w-8 flex items-center justify-center text-sm rounded-full cursor-pointer transition-colors mx-auto",
                                             !dayObj.current && "text-gray-300",
-                                            dayObj.current && !isSelected && "text-black hover:bg-gray-100",
+                                            dayObj.current && !isSelected && "text-black hover:bg-[#5FC5FF26]",
                                             isSelected && "bg-[#E0F2FE] text-black font-semibold" // Light blue selected state like image
                                         )}
                                     >
