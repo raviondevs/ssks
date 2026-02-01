@@ -1,45 +1,55 @@
+import { useState } from 'react';
 import PagePlaceholder from '../components/PagePlaceholder';
 import EventCard from '../components/EventCard';
 import cardDefaultImg from '../assets/card-default.jpg';
 import NestedDropdown from '../components/NestedDropdown';
+import Modal from '../components/Modal';
 
 export default function Updates() {
+    const [selectedUpdate, setSelectedUpdate] = useState<any>(null);
+
     const updates = [
         {
             date: "6th April, 2025",
             title: "SMVS Swaminarayan Hospital 8th Years Anniversary",
             location: "Gandhinagar, India",
-            image: cardDefaultImg
+            image: cardDefaultImg,
+            description: "Celebrating 8 years of selfless service and healthcare excellence. Join us for a special commemorative event featuring guest speakers, success stories, and a vision for the future of SMVS healthcare initiatives. The event will showcase the impact of the hospital on the local community and the humanitarian efforts carried out by our dedicated medical team."
         },
         {
             date: "6th April, 2025",
             title: "SMVS Swaminarayan Hospital 8th Years Anniversary",
             location: "Gandhinagar, India",
-            image: cardDefaultImg
+            image: cardDefaultImg,
+            description: "Celebrating 8 years of selfless service and healthcare excellence. Join us for a special commemorative event featuring guest speakers, success stories, and a vision for the future of SMVS healthcare initiatives. The event will showcase the impact of the hospital on the local community and the humanitarian efforts carried out by our dedicated medical team."
         },
         {
             date: "6th April, 2025",
             title: "SMVS Swaminarayan Hospital 8th Years Anniversary",
             location: "Gandhinagar, India",
-            image: cardDefaultImg
+            image: cardDefaultImg,
+            description: "Celebrating 8 years of selfless service and healthcare excellence. Join us for a special commemorative event featuring guest speakers, success stories, and a vision for the future of SMVS healthcare initiatives. The event will showcase the impact of the hospital on the local community and the humanitarian efforts carried out by our dedicated medical team."
         },
         {
             date: "6th April, 2025",
             title: "SMVS Swaminarayan Hospital 8th Years Anniversary",
             location: "Gandhinagar, India",
-            image: cardDefaultImg
+            image: cardDefaultImg,
+            description: "Celebrating 8 years of selfless service and healthcare excellence. Join us for a special commemorative event featuring guest speakers, success stories, and a vision for the future of SMVS healthcare initiatives. The event will showcase the impact of the hospital on the local community and the humanitarian efforts carried out by our dedicated medical team."
         },
         {
             date: "6th April, 2025",
             title: "SMVS Swaminarayan Hospital 8th Years Anniversary",
             location: "Gandhinagar, India",
-            image: cardDefaultImg
+            image: cardDefaultImg,
+            description: "Celebrating 8 years of selfless service and healthcare excellence. Join us for a special commemorative event featuring guest speakers, success stories, and a vision for the future of SMVS healthcare initiatives. The event will showcase the impact of the hospital on the local community and the humanitarian efforts carried out by our dedicated medical team."
         },
         {
             date: "6th April, 2025",
             title: "SMVS Swaminarayan Hospital 8th Years Anniversary",
             location: "Gandhinagar, India",
-            image: cardDefaultImg
+            image: cardDefaultImg,
+            description: "Celebrating 8 years of selfless service and healthcare excellence. Join us for a special commemorative event featuring guest speakers, success stories, and a vision for the future of SMVS healthcare initiatives. The event will showcase the impact of the hospital on the local community and the humanitarian efforts carried out by our dedicated medical team."
         },
     ];
 
@@ -89,20 +99,45 @@ export default function Updates() {
     );
 
     return (
-        <PagePlaceholder
-            heroTitle="Satsang Updates"
-            contentTitle="Global Event"
-            filterComponent={filters}
-        >
-            <div className="flex flex-wrap gap-8 mt-12 justify-center">
-                {updates.map((update, index) => (
-                    <EventCard
-                        key={index}
-                        {...update}
-                        onViewClick={() => console.log('View clicked for:', update.title)}
+        <>
+            <PagePlaceholder
+                heroTitle="Satsang Updates"
+                contentTitle="Global Event"
+                filterComponent={filters}
+            >
+                <div className="flex flex-wrap gap-8 mt-12 justify-center">
+                    {updates.map((update, index) => (
+                        <EventCard
+                            key={index}
+                            {...update}
+                            onViewClick={() => setSelectedUpdate(update)}
+                        />
+                    ))}
+                </div>
+            </PagePlaceholder>
+
+            <Modal
+                isOpen={!!selectedUpdate}
+                onClose={() => setSelectedUpdate(null)}
+                title={selectedUpdate?.title || ''}
+            >
+                <div className="space-y-4">
+                    <img
+                        src={selectedUpdate?.image}
+                        alt={selectedUpdate?.title}
+                        className="w-full h-64 object-cover rounded-2xl mb-4"
                     />
-                ))}
-            </div>
-        </PagePlaceholder>
+                    <div className="flex items-center gap-4 text-sm text-gray-500 font-outfit">
+                        <span>{selectedUpdate?.date}</span>
+                        <span>•</span>
+                        <span>{selectedUpdate?.location}</span>
+                    </div>
+                    <p className="text-lg leading-relaxed">
+                        {selectedUpdate?.description}
+                    </p>
+                </div>
+            </Modal>
+        </>
     );
 }
+
