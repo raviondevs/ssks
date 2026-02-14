@@ -123,7 +123,7 @@ export default function VideosManager() {
             </div>
 
             {/* Video List */}
-            <div className="bg-white rounded-[40px] border border-gray-100 overflow-hidden" style={{ boxShadow: '8px 8px 0px 0px #005382' }}>
+            <div className="bg-white rounded-[40px] border border-gray-100 overflow-hidden shadow-sm">
                 <table className="w-full border-collapse">
                     <thead>
                         <tr className="bg-gray-50/50 border-b border-gray-100">

@@ -44,7 +44,7 @@ export default function AdminLayout() {
     };
 
     return (
-        <div className="min-h-screen bg-[#FDFCFB] flex">
+        <div className="min-h-screen bg-[#F0F4F8] flex">
             {/* Mobile Sidebar Overlay */}
             <AnimatePresence>
                 {sidebarOpen && (
@@ -140,8 +140,8 @@ export default function AdminLayout() {
                         <Menu size={24} />
                     </button>
 
-                    <div className="flex items-center gap-6 ml-auto">
-                        <div className="flex flex-col items-end hidden sm:flex">
+                    <div className="flex items-center gap-6 ml-auto ">
+                        <div className="flex flex-col items-end hidden sm:flex ">
                             <span className="text-sm font-bold text-[#005382] font-outfit">Satyaprakash Das</span>
                             <span className="text-[10px] text-gray-400 font-outfit uppercase font-bold tracking-widest">Super Administrator</span>
                         </div>

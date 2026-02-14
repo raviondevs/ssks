@@ -84,8 +84,7 @@ export default function DarshanManager() {
 
             {/* Main Calendar Card */}
             <div
-                className="bg-white rounded-[50px] border border-gray-100 overflow-hidden relative"
-                style={{ boxShadow: '12px 12px 0px 0px #005382' }}
+                className="bg-white rounded-[50px] border border-gray-100 overflow-hidden relative shadow-sm"
             >
                 {/* Calendar Header Controls */}
                 <div className="p-10 border-b border-gray-50 flex items-center justify-between bg-gradient-to-r from-white to-gray-50/50">
@@ -109,7 +108,7 @@ export default function DarshanManager() {
                 <div className="p-10">
                     <div className="grid grid-cols-7 gap-6">
                         {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(dayName => (
-                            <div key={dayName} className="text-center font-bold text-[#E21E25] font-outfit py-4 uppercase tracking-[0.2em] text-[10px] opacity-40">
+                            <div key={dayName} className="text-center font-bold text-[#E21E25] font-outfit py-4 uppercase tracking-[0.2em] text-[10px]">
                                 {dayName}
                             </div>
                         ))}
@@ -129,14 +128,14 @@ export default function DarshanManager() {
                                     key={dayValue}
                                     onClick={() => handleDateClick(dayValue)}
                                     className={`
-                                        aspect-square rounded-[35px] border-2 transition-all cursor-pointer group relative overflow-hidden
+                                        aspect-square rounded-[25px] border-2 transition-all cursor-pointer group relative overflow-hidden
                                         ${image ? 'border-[#005382] shadow-xl' : 'border-dashed border-gray-100 bg-white hover:border-[#E21E25] hover:bg-red-50/5'}
                                         ${isToday && !image ? 'border-[#E21E25] bg-red-50/30' : ''}
                                     `}
                                 >
                                     {/* Date Number Badge */}
                                     <div className={`absolute top-4 left-4 w-8 h-8 rounded-xl flex items-center justify-center text-xs font-bold z-20 font-outfit transition-colors
-                                        ${image ? 'bg-white text-[#005382] shadow-lg' : isToday ? 'bg-[#E21E25] text-white' : 'bg-gray-50 text-gray-400 group-hover:bg-[#E21E25] group-hover:text-white'}
+                                        ${image ? 'bg-white text-[#000000] shadow-lg' : isToday ? 'bg-[#E21E25] text-white' : 'bg-gray-50 text-black-100 group-hover:bg-[#E21E25] group-hover:text-white'}
                                     `}>
                                         {dayValue}
                                     </div>

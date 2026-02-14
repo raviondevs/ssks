@@ -156,12 +156,11 @@ export default function Home() {
                                     ].map((item, index) => (
                                         <div
                                             key={`${set}-${index}`}
-                                            className="flex flex-col shrink-0 bg-white"
+                                            className="flex flex-col shrink-0 bg-white shadow-md"
                                             style={{
                                                 width: '370px',
                                                 height: '349px',
                                                 borderRadius: '36px',
-                                                boxShadow: '6px 6px 0px 0px #005382',
                                                 border: '1px solid #005382'
                                             }}
                                         >
@@ -207,11 +206,10 @@ export default function Home() {
                             ].map((item, i) => (
                                 <div
                                     key={i}
-                                    className="flex flex-col items-center bg-white group"
+                                    className="flex flex-col items-center bg-white shadow-md group"
                                     style={{
                                         width: '431px',
                                         borderRadius: '18px',
-                                        boxShadow: '6px 6px 0px 0px #038972',
                                         padding: '24px 20px',
                                         gap: '18px'
                                     }}
@@ -297,7 +295,7 @@ export default function Home() {
                             padding: '12px',
                             borderRadius: '67px',
                             background: '#038972',
-                            boxShadow: '4px 4px 0px 0px #005E4E',
+                            boxShadow: '0 4px 12px rgba(3, 137, 114, 0.3)',
                             fontFamily: 'Outfit, sans-serif'
                         }}
                     >
@@ -326,14 +324,13 @@ export default function Home() {
 
                                 {/* Card Box */}
                                 <div
-                                    className="bg-white flex flex-col items-center transition-transform hover:-translate-y-1"
+                                    className="bg-white flex flex-col items-center transition-transform hover:-translate-y-1 shadow-md"
                                     style={{
                                         width: '325px',
                                         height: '396px',
                                         gap: '22px',
                                         borderRadius: '18px',
-                                        padding: '20px',
-                                        boxShadow: '6px 6px 0px 0px #C65300'
+                                        padding: '20px'
                                     }}
                                 >
                                     <img
@@ -500,13 +497,7 @@ export default function Home() {
                             { title: "Donation", desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
                             { title: "Charities", desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry." }
                         ].map((item, index) => (
-                            <div key={index} className="relative group" style={{ width: '600px', height: '302.12px' }}>
-                                {/* Accent Background (Thick Green Shadow) */}
-                                <div
-                                    className="absolute inset-0 bg-[#038972] translate-y-[8.8px] translate-x-[8.8px]"
-                                    style={{ borderRadius: '52.85px' }}
-                                />
-
+                            <div key={index} className="relative group shadow-lg" style={{ width: '600px', height: '302.12px', borderRadius: '52.85px' }}>
                                 {/* Main Card Content */}
                                 <div
                                     className="relative w-full h-full bg-white flex overflow-hidden transition-all duration-500 ease-out"
@@ -684,11 +675,12 @@ export default function Home() {
             </section >
 
             {/* FOUNDER & SUCCESSORS Section */}
-            <section
+            < section
                 className="w-full py-[100px] relative overflow-hidden shadow-none border-none"
                 style={{
                     background: 'linear-gradient(180deg, #E8F7FF 0%, #FFF5F5 15%, #FFF5F5 40%, #F0FDFB 80%, #F0FDFB 100%)'
-                }}
+                }
+                }
             >
                 <div className="max-w-container mx-auto flex flex-col items-center gap-[80px]">
                     {/* Title */}
@@ -803,10 +795,10 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* GALLERY Section */}
-            <section
+            < section
                 className="w-full overflow-hidden py-[100px] shadow-none border-none"
                 style={{
                     background: '#F0FDFB'
@@ -899,8 +891,8 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
-        </div>
+        </div >
     );
 }

@@ -135,8 +135,7 @@ export default function EventsManager() {
                 {filteredEvents.map((event) => (
                     <div
                         key={event.id}
-                        className="bg-white rounded-[40px] border border-gray-100 overflow-hidden hover:shadow-xl transition-all group flex flex-col"
-                        style={{ boxShadow: '8px 8px 0px 0px #005382' }}
+                        className="bg-white rounded-[25px] border-2 border-gray-200 hover:border-orange-500 overflow-hidden transition-all group flex flex-col"
                     >
                         <div className="h-56 bg-gray-100 relative overflow-hidden shrink-0">
                             <img

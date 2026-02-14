@@ -117,8 +117,7 @@ export default function PublicationsManager() {
 
             {/* Resources Display Grid */}
             <div
-                className="bg-white rounded-[40px] border border-gray-100 overflow-hidden"
-                style={{ boxShadow: '8px 8px 0px 0px #005382' }}
+                className="bg-white rounded-[40px] border border-gray-100 overflow-hidden shadow-sm"
             >
                 <div className="divide-y divide-gray-50">
                     {filteredPubs.map((pub) => (

@@ -128,9 +128,8 @@ export default function Inquiries() {
                 {filteredInquiries.map((inquiry) => (
                     <div
                         key={inquiry.id}
-                        className={`bg-white rounded-[40px] border p-8 hover:translate-x-1 transition-all cursor-pointer group 
-                                   ${inquiry.status === 'new' ? 'border-[#005382] bg-blue-50/5' : 'border-gray-100'}`}
-                        style={inquiry.status === 'new' ? { boxShadow: '6px 6px 0px 0px #005382' } : {}}
+                        className={`rounded-[25px] border-2 p-8 hover:shadow-sm transition-all cursor-pointer group 
+                                   ${inquiry.status === 'new' ? 'bg-blue-50/30 border-[#005382]' : 'bg-white border-gray-200 hover:border-[#005382]'}`}
                         onClick={() => handleView(inquiry)}
                     >
                         <div className="flex flex-col lg:flex-row gap-8">

@@ -145,8 +145,7 @@ export default function PracticesManager() {
                 {practices.filter(p => p.title.toLowerCase().includes(searchTerm.toLowerCase())).map((practice) => (
                     <div
                         key={practice.id}
-                        className="group bg-white rounded-[50px] border border-gray-100 overflow-hidden hover:shadow-2xl transition-all h-full flex flex-col relative"
-                        style={{ boxShadow: '8px 8px 0px 0px #005382' }}
+                        className="group bg-white rounded-[50px] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl transition-all h-full flex flex-col relative"
                     >
                         <div className="p-10 flex-1 flex flex-col">
                             <div className="flex justify-between items-start mb-6">

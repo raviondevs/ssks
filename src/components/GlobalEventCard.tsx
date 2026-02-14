@@ -8,12 +8,11 @@ interface GlobalEventCardProps {
 export default function GlobalEventCard({ image, title, date, onViewClick }: GlobalEventCardProps) {
     return (
         <div
-            className="bg-white flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 w-full max-w-[360px] h-auto min-h-[396px]"
+            className="bg-white flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 w-full max-w-[360px] h-auto min-h-[396px] shadow-md"
             style={{
                 padding: '20px',
                 borderRadius: '18px',
-                border: '1px solid #E5E7EB', // Adding a subtle border as is common, though not strictly requested, helps definition if shadow is offset
-                boxShadow: '6px 6px 0px 0px #005382'
+                border: '1px solid #E5E7EB' // Adding a subtle border as is common, though not strictly requested, helps definition if shadow is offset
             }}
         >
             <div className="flex flex-col gap-[22px] h-full">

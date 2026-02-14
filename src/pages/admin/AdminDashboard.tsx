@@ -27,7 +27,7 @@ export default function AdminDashboard() {
     return (
         <div className="space-y-10 pb-20">
             {/* Dynamic Greeting Header */}
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 bg-white p-10 rounded-[50px] border border-gray-100 shadow-sm relative overflow-hidden">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 bg-white p-10 rounded-[30px] border-2 border-gray-200 hover:border-[#005382] transition-all relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#005382]/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
                 <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-4">
@@ -66,8 +66,7 @@ export default function AdminDashboard() {
                 {stats.map((stat) => (
                     <div
                         key={stat.name}
-                        className="bg-white p-10 rounded-[50px] border border-gray-100 transition-all hover:shadow-2xl group relative overflow-hidden flex flex-col justify-between"
-                        style={{ boxShadow: '10px 10px 0px 0px #005382' }}
+                        className="bg-white p-10 rounded-[30px] border-2 border-gray-200 hover:border-[#005382] transition-all group relative overflow-hidden flex flex-col justify-between"
                     >
                         <div className="flex items-start justify-between mb-8">
                             <div className={`p-5 rounded-3xl ${stat.bgColor} ${stat.color} group-hover:scale-110 transition-transform duration-500`}>
@@ -97,8 +96,7 @@ export default function AdminDashboard() {
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
                 {/* Advanced Analytics Panel (Simulated with CSS) */}
                 <div
-                    className="xl:col-span-2 bg-white p-10 rounded-[50px] border border-gray-100 flex flex-col"
-                    style={{ boxShadow: '10px 10px 0px 0px #E21E25' }}
+                    className="xl:col-span-2 bg-white p-10 rounded-[30px] border-2 border-gray-200 hover:border-[#005382] transition-all flex flex-col"
                 >
                     <div className="flex items-center justify-between mb-10">
                         <div>
@@ -158,8 +156,7 @@ export default function AdminDashboard() {
                 <div className="space-y-10">
                     {/* Real-time Feed */}
                     <div
-                        className="bg-white p-10 rounded-[50px] border border-gray-100 relative overflow-hidden"
-                        style={{ boxShadow: '10px 10px 0px 0px #005382' }}
+                        className="bg-white p-10 rounded-[30px] border-2 border-gray-200 hover:border-[#E21E25] transition-all relative overflow-hidden"
                     >
                         <h2 className="text-3xl font-katibeh text-[#005382] mb-8 flex items-center gap-3">
                             <Zap size={24} className="text-[#E21E25]" /> Stream Feed
@@ -188,8 +185,7 @@ export default function AdminDashboard() {
                     <div className="grid grid-cols-2 gap-6">
                         <div
                             onClick={() => navigate('/admin/inquiries')}
-                            className="bg-white p-8 rounded-[40px] border border-gray-100 cursor-pointer group hover:bg-[#005382] transition-all"
-                            style={{ boxShadow: '6px 6px 0px 0px #E21E25' }}
+                            className="bg-white p-8 rounded-[25px] border-2 border-gray-200 hover:border-[#005382] cursor-pointer group hover:bg-[#005382] transition-all"
                         >
                             <MessageSquare className="text-[#005382] group-hover:text-white mb-4 group-hover:scale-110 transition-transform" size={32} />
                             <h4 className="text-lg font-bold text-[#005382] group-hover:text-white font-outfit mb-1">Inquiries</h4>
@@ -197,8 +193,7 @@ export default function AdminDashboard() {
                         </div>
                         <div
                             onClick={() => navigate('/admin/videos')}
-                            className="bg-white p-8 rounded-[40px] border border-gray-100 cursor-pointer group hover:bg-[#E21E25] transition-all"
-                            style={{ boxShadow: '6px 6px 0px 0px #005382' }}
+                            className="bg-white p-8 rounded-[25px] border-2 border-gray-200 hover:border-[#E21E25] cursor-pointer group hover:bg-[#E21E25] transition-all"
                         >
                             <Monitor className="text-[#E21E25] group-hover:text-white mb-4 group-hover:scale-110 transition-transform" size={32} />
                             <h4 className="text-lg font-bold text-[#005382] group-hover:text-white font-outfit mb-1">Media TV</h4>
@@ -216,7 +211,7 @@ export default function AdminDashboard() {
                     { label: 'Server Load', value: '0.42s', sub: 'Optimized', icon: Zap },
                     { label: 'Drafts', value: '3', sub: 'Action Required', icon: FileText }
                 ].map((item, i) => (
-                    <div key={i} className="bg-white p-6 rounded-[35px] border border-gray-50 flex items-center gap-5 hover:shadow-lg transition-all group">
+                    <div key={i} className="bg-white p-6 rounded-[20px] border-2 border-gray-200 hover:border-[#005382] flex items-center gap-5 transition-all group">
                         <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-[#005382] group-hover:bg-[#005382] group-hover:text-white transition-all shadow-inner">
                             <item.icon size={24} />
                         </div>

@@ -9,12 +9,11 @@ interface VideoCardProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function VideoCard({ thumbnail, title, date, duration, onPlayClick, className, style, ...props }: VideoCardProps) {
     return (
         <div
-            className={`bg-white flex flex-col hover:-translate-y-1 transition-transform duration-300 w-full max-w-[360px] h-auto min-h-[326px] ${className || ''}`}
+            className={`bg-white flex flex-col hover:-translate-y-1 transition-transform duration-300 w-full max-w-[360px] h-auto min-h-[326px] shadow-md ${className || ''}`}
             style={{
                 padding: '20px',
                 borderRadius: '18px',
                 border: '1px solid #E5E7EB', // Subtle border for definition
-                boxShadow: '6px 6px 0px 0px #005382',
                 gap: '22px',
                 ...style
             }}

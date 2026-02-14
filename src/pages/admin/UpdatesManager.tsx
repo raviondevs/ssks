@@ -138,8 +138,7 @@ export default function UpdatesManager() {
                     filteredUpdates.map((update) => (
                         <div
                             key={update.id}
-                            className="bg-white p-6 rounded-[40px] border border-gray-100 transition-all hover:translate-x-1 flex flex-col lg:flex-row gap-8 items-center cursor-pointer group"
-                            style={{ boxShadow: '8px 8px 0px 0px #005382' }}
+                            className="bg-white p-6 rounded-[25px] border-2 border-gray-200 hover:border-[#005382] transition-all flex flex-col lg:flex-row gap-8 items-center cursor-pointer group"
                             onClick={() => handleView(update)}
                         >
                             <div className="relative shrink-0 w-full lg:w-48 h-48 lg:h-32 rounded-[24px] overflow-hidden shadow-inner">

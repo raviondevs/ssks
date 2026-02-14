@@ -130,8 +130,7 @@ export default function SatsangManager() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Reading Material Column */}
                 <div
-                    className="bg-white p-8 rounded-[40px] border border-gray-100 flex flex-col"
-                    style={{ boxShadow: '8px 8px 0px 0px #005382' }}
+                    className="bg-white p-8 rounded-[40px] border border-gray-100 shadow-sm flex flex-col"
                 >
                     <div className="flex items-center justify-between mb-8">
                         <div className="flex items-center gap-4">
@@ -174,8 +173,7 @@ export default function SatsangManager() {
 
                 {/* 5-Minute Satsang Column */}
                 <div
-                    className="bg-white p-8 rounded-[40px] border border-gray-100 flex flex-col"
-                    style={{ boxShadow: '8px 8px 0px 0px #E21E25' }}
+                    className="bg-white p-8 rounded-[40px] border border-gray-100 shadow-sm flex flex-col"
                 >
                     <div className="flex items-center justify-between mb-8">
                         <div className="flex items-center gap-4">

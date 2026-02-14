@@ -8,13 +8,12 @@ interface PracticeCardProps {
 export default function PracticeCard({ thumbnail, title, onClick }: PracticeCardProps) {
     return (
         <div
-            className="bg-white flex flex-col items-center hover:-translate-y-1 transition-transform duration-300 cursor-pointer overflow-hidden pb-4 w-full max-w-[365px] h-auto aspect-[365/401]"
+            className="bg-white flex flex-col items-center hover:-translate-y-1 transition-transform duration-300 cursor-pointer overflow-hidden pb-4 w-full max-w-[365px] h-auto aspect-[365/401] shadow-sm"
             style={{
                 borderTopLeftRadius: '177.37px',
                 borderTopRightRadius: '177.37px',
                 borderBottomRightRadius: '13.3px',
-                borderBottomLeftRadius: '13.3px',
-                boxShadow: '8.87px 8.87px 0px 0px #09517B'
+                borderBottomLeftRadius: '13.3px'
             }}
             onClick={onClick}
         >
