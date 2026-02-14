@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Image as LucideImage, Play, Volume2 } from 'lucide-react';
-import heroBackground from '../assets/hero-background.jpg';
+import heroBackground from '../assets/hero-background.png';
 import deityImage from '../assets/deity.png';
 import dailyDarshanImg from '../assets/daily-darshan.jpg';
 import upcomingEventImg from '../assets/upcoming-event-img-2.png';
