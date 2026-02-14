@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Trash2, MapPin, Calendar, Clock, Search, Edit2, Users, Tag, Eye } from 'lucide-react';
+import { Plus, Trash2, MapPin, Calendar, Clock, Search, Edit2, Users, Tag } from 'lucide-react';
 import Modal from '../../components/Modal';
 import type { Event } from '../../types/admin';
 

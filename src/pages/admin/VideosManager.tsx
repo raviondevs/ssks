@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Video, Trash2, Search, Edit2, Play, Eye, Clock, User } from 'lucide-react';
+import { Plus, Video, Trash2, Search, Edit2, Play, Eye, Clock } from 'lucide-react';
 import Modal from '../../components/Modal';
 import type { Video as VideoType } from '../../types/admin';
 

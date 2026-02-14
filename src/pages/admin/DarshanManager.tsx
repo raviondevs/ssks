@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Upload, ChevronLeft, ChevronRight, X, Eye, Calendar as CalendarIcon, Image as ImageIcon, Sparkles, Trash2, LayoutGrid, List, CheckSquare } from 'lucide-react';
+import { Upload, ChevronLeft, ChevronRight, Eye, Calendar as CalendarIcon, Image as ImageIcon, Sparkles, Trash2, LayoutGrid, CheckSquare } from 'lucide-react';
 import Modal from '../../components/Modal';
 
 export default function DarshanManager() {

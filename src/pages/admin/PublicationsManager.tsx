@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, FileText, Trash2, Search, Edit2, Download, Eye, File, Book, Tag, Info, Monitor, Smartphone } from 'lucide-react';
+import { Plus, FileText, Trash2, Search, Edit2, Download, Eye, File, Book, Tag, Monitor, Smartphone } from 'lucide-react';
 import Modal from '../../components/Modal';
 import type { Publication } from '../../types/admin';
 
