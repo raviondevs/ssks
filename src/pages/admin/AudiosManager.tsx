@@ -111,7 +111,7 @@ export default function AudiosManager() {
                     <input
                         type="text"
                         placeholder="Search by title or artist..."
-                        className="w-full pl-12 pr-4 py-3 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005382]/10 focus:border-[#005382] font-outfit bg-gray-50/50"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005382]/10 focus:border-[#005382] font-outfit bg-gray-50/50"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
@@ -183,7 +183,7 @@ export default function AudiosManager() {
                                 name="title"
                                 type="text"
                                 required
-                                className="w-full px-5 py-4 border border-gray-100 rounded-2xl outline-none font-outfit bg-gray-50/30 font-bold"
+                                className="w-full px-5 py-4 border border-gray-300 rounded-2xl outline-none font-outfit bg-gray-50/30 font-bold"
                                 defaultValue={selectedAudio?.title}
                                 placeholder="Formal title for the audio track"
                             />
@@ -195,7 +195,7 @@ export default function AudiosManager() {
                                     name="artist"
                                     type="text"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                     defaultValue={selectedAudio?.artist}
                                 />
                             </div>
@@ -203,7 +203,7 @@ export default function AudiosManager() {
                                 <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest font-outfit">Categorization</label>
                                 <select
                                     name="category"
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                     defaultValue={selectedAudio?.category}
                                 >
                                     <option>Kirtan</option>
@@ -221,7 +221,7 @@ export default function AudiosManager() {
                                     name="duration"
                                     type="text"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                     defaultValue={selectedAudio?.duration}
                                     placeholder="HH:MM:SS"
                                 />
@@ -232,7 +232,7 @@ export default function AudiosManager() {
                                     name="audioUrl"
                                     type="url"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                     defaultValue={selectedAudio?.audioUrl}
                                     placeholder="Direct MP3 or Streaming Link"
                                 />

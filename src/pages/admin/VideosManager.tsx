@@ -115,7 +115,7 @@ export default function VideosManager() {
                     <input
                         type="text"
                         placeholder="Search by title or category..."
-                        className="w-full pl-12 pr-4 py-3 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005382]/10 focus:border-[#005382] font-outfit bg-gray-50/50"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005382]/10 focus:border-[#005382] font-outfit bg-gray-50/50"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
@@ -183,7 +183,7 @@ export default function VideosManager() {
                                 name="title"
                                 type="text"
                                 required
-                                className="w-full px-5 py-4 border border-gray-100 rounded-2xl outline-none font-outfit bg-gray-50/30 font-bold"
+                                className="w-full px-5 py-4 border border-gray-300 rounded-2xl outline-none font-outfit bg-gray-50/30 font-bold"
                                 defaultValue={selectedVideo?.title}
                                 placeholder="Formal title for the media portal"
                             />
@@ -193,7 +193,7 @@ export default function VideosManager() {
                                 <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest font-outfit">Categorization</label>
                                 <select
                                     name="category"
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                     defaultValue={selectedVideo?.category}
                                 >
                                     <option>Rituals</option>
@@ -209,7 +209,7 @@ export default function VideosManager() {
                                     name="duration"
                                     type="text"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                     defaultValue={selectedVideo?.duration}
                                     placeholder="HH:MM:SS"
                                 />
@@ -221,7 +221,7 @@ export default function VideosManager() {
                                 name="videoUrl"
                                 type="url"
                                 required
-                                className="w-full px-5 py-4 border border-gray-100 rounded-2xl outline-none font-outfit bg-gray-50/30 font-medium"
+                                className="w-full px-5 py-4 border border-gray-300 rounded-2xl outline-none font-outfit bg-gray-50/30 font-medium"
                                 defaultValue={selectedVideo?.videoUrl}
                                 placeholder="YouTube, Vimeo or Direct URL"
                             />
@@ -232,7 +232,7 @@ export default function VideosManager() {
                                 name="description"
                                 rows={3}
                                 required
-                                className="w-full px-5 py-4 border border-gray-100 rounded-[25px] outline-none resize-none font-outfit bg-gray-50/30 font-medium leading-relaxed"
+                                className="w-full px-5 py-4 border border-gray-300 rounded-[25px] outline-none resize-none font-outfit bg-gray-50/30 font-medium leading-relaxed"
                                 defaultValue={selectedVideo?.description}
                                 placeholder="Write a short summary about the video content..."
                             />

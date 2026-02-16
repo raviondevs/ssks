@@ -119,7 +119,7 @@ export default function SatsangManager() {
                     <input
                         type="text"
                         placeholder="Search by title, author or content..."
-                        className="w-full pl-12 pr-4 py-3 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005382]/10 focus:border-[#005382] font-outfit bg-gray-50/50"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005382]/10 focus:border-[#005382] font-outfit bg-gray-50/50"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
@@ -233,7 +233,7 @@ export default function SatsangManager() {
                                     name="title"
                                     type="text"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-gray-50/30 font-bold"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-gray-50/30 font-bold"
                                     defaultValue={selectedArticle?.title}
                                     placeholder="Enter Title"
                                 />
@@ -242,7 +242,7 @@ export default function SatsangManager() {
                                 <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest font-outfit">Satsang Type</label>
                                 <select
                                     name="type"
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                     defaultValue={selectedArticle?.type}
                                 >
                                     <option>Reading Material</option>
@@ -259,7 +259,7 @@ export default function SatsangManager() {
                                     name="author"
                                     type="text"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                     defaultValue={selectedArticle?.author}
                                 />
                             </div>
@@ -269,7 +269,7 @@ export default function SatsangManager() {
                                     name="date"
                                     type="date"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                     defaultValue={selectedArticle?.date}
                                 />
                             </div>
@@ -281,7 +281,7 @@ export default function SatsangManager() {
                                 name="description"
                                 type="text"
                                 required
-                                className="w-full px-5 py-3 border border-gray-100 rounded-2xl outline-none font-outfit bg-gray-50/30 font-medium"
+                                className="w-full px-5 py-3 border border-gray-300 rounded-2xl outline-none font-outfit bg-gray-50/30 font-medium"
                                 defaultValue={selectedArticle?.description}
                                 placeholder="A brief catch-phrase for the article"
                             />
@@ -293,7 +293,7 @@ export default function SatsangManager() {
                                 name="content"
                                 rows={8}
                                 required
-                                className="w-full px-6 py-4 border border-gray-100 rounded-[30px] outline-none resize-none font-outfit bg-gray-50/30 font-medium leading-relaxed"
+                                className="w-full px-6 py-4 border border-gray-300 rounded-[30px] outline-none resize-none font-outfit bg-gray-50/30 font-medium leading-relaxed"
                                 defaultValue={selectedArticle?.content}
                                 placeholder="Write the main message here..."
                             />

@@ -128,7 +128,7 @@ export default function PracticesManager() {
                     <input
                         type="text"
                         placeholder="Search practices by title or keywords..."
-                        className="w-full pl-16 pr-8 py-4 border border-gray-100 rounded-2xl focus:outline-none focus:ring-4 focus:ring-[#005382]/5 focus:border-[#005382] font-outfit bg-gray-50/50"
+                        className="w-full pl-16 pr-8 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-4 focus:ring-[#005382]/5 focus:border-[#005382] font-outfit bg-gray-50/50"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
@@ -203,7 +203,7 @@ export default function PracticesManager() {
                                     name="title"
                                     type="text"
                                     required
-                                    className="w-full px-6 py-4 border border-gray-100 rounded-2xl outline-none font-outfit bg-gray-50/30 font-bold focus:bg-white focus:shadow-xl focus:shadow-blue-100 transition-all"
+                                    className="w-full px-6 py-4 border border-gray-300 rounded-2xl outline-none font-outfit bg-gray-50/30 font-bold focus:bg-white focus:shadow-xl focus:shadow-blue-100 transition-all"
                                     defaultValue={selectedPractice?.title}
                                 />
                             </div>
@@ -212,7 +212,7 @@ export default function PracticesManager() {
                                     <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest font-outfit ml-1">Category</label>
                                     <select
                                         name="category"
-                                        className="w-full px-5 py-4 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-medium"
+                                        className="w-full px-5 py-4 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-medium"
                                         defaultValue={selectedPractice?.category}
                                     >
                                         <option>Daily</option>
@@ -227,7 +227,7 @@ export default function PracticesManager() {
                                         name="points"
                                         type="number"
                                         required
-                                        className="w-full px-5 py-4 border border-gray-100 rounded-2xl outline-none font-outfit bg-white font-bold"
+                                        className="w-full px-5 py-4 border border-gray-300 rounded-2xl outline-none font-outfit bg-white font-bold"
                                         defaultValue={selectedPractice?.points}
                                     />
                                 </div>
@@ -240,7 +240,7 @@ export default function PracticesManager() {
                                 name="description"
                                 type="text"
                                 required
-                                className="w-full px-6 py-4 border border-gray-100 rounded-2xl outline-none font-outfit bg-gray-50/30 font-medium"
+                                className="w-full px-6 py-4 border border-gray-300 rounded-2xl outline-none font-outfit bg-gray-50/30 font-medium"
                                 defaultValue={selectedPractice?.description}
                                 placeholder="Short explanation of why this is important"
                             />
@@ -253,7 +253,7 @@ export default function PracticesManager() {
                                     name="instructions"
                                     rows={5}
                                     required
-                                    className="w-full px-6 py-4 border border-gray-100 rounded-[30px] outline-none resize-none font-outfit bg-gray-50/30"
+                                    className="w-full px-6 py-4 border border-gray-300 rounded-[30px] outline-none resize-none font-outfit bg-gray-50/30"
                                     defaultValue={selectedPractice?.instructions.join('\n')}
                                     placeholder="Step 1: Focus...&#10;Step 2: Breathe..."
                                 />
@@ -264,7 +264,7 @@ export default function PracticesManager() {
                                     name="benefit"
                                     rows={5}
                                     required
-                                    className="w-full px-6 py-4 border border-gray-100 rounded-[30px] outline-none resize-none font-outfit bg-gray-50/30"
+                                    className="w-full px-6 py-4 border border-gray-300 rounded-[30px] outline-none resize-none font-outfit bg-gray-50/30"
                                     defaultValue={selectedPractice?.benefit}
                                     placeholder="What is the ultimate spiritual outcome?"
                                 />

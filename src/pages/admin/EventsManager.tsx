@@ -123,7 +123,7 @@ export default function EventsManager() {
                     <input
                         type="text"
                         placeholder="Search events by title or location..."
-                        className="w-full pl-12 pr-4 py-3 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005382]/10 focus:border-[#005382] font-outfit bg-gray-50/50"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005382]/10 focus:border-[#005382] font-outfit bg-gray-50/50"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
@@ -212,7 +212,7 @@ export default function EventsManager() {
                                     name="title"
                                     type="text"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
                                     defaultValue={selectedEvent?.title}
                                 />
                             </div>
@@ -220,7 +220,7 @@ export default function EventsManager() {
                                 <label className="text-sm font-medium text-gray-700 font-outfit uppercase tracking-wider">Category</label>
                                 <select
                                     name="category"
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-white"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-white"
                                     defaultValue={selectedEvent?.category}
                                 >
                                     <option>Festival</option>
@@ -238,7 +238,7 @@ export default function EventsManager() {
                                     name="date"
                                     type="date"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
                                     defaultValue={selectedEvent?.date}
                                 />
                             </div>
@@ -248,7 +248,7 @@ export default function EventsManager() {
                                     name="time"
                                     type="time"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
                                     defaultValue={selectedEvent?.time}
                                 />
                             </div>
@@ -258,7 +258,7 @@ export default function EventsManager() {
                                     name="attendees"
                                     type="number"
                                     required
-                                    className="w-full px-5 py-3 border border-gray-100 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
+                                    className="w-full px-5 py-3 border border-gray-300 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
                                     defaultValue={selectedEvent?.attendees}
                                 />
                             </div>
@@ -269,7 +269,7 @@ export default function EventsManager() {
                                 name="location"
                                 type="text"
                                 required
-                                className="w-full px-5 py-3 border border-gray-100 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
+                                className="w-full px-5 py-3 border border-gray-300 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none font-outfit bg-gray-50/30"
                                 defaultValue={selectedEvent?.location}
                             />
                         </div>
@@ -279,7 +279,7 @@ export default function EventsManager() {
                                 name="description"
                                 rows={4}
                                 required
-                                className="w-full px-5 py-3 border border-gray-100 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none resize-none font-outfit bg-gray-50/30"
+                                className="w-full px-5 py-3 border border-gray-300 rounded-2xl focus:shadow-lg focus:shadow-[#005382]/5 outline-none resize-none font-outfit bg-gray-50/30"
                                 defaultValue={selectedEvent?.description}
                             />
                         </div>
