@@ -15,7 +15,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="sticky top-0 left-1/2 -translate-x-1/2 w-full max-w-container z-[100] px-[10px] md:px-[20px] pt-[10px] md:pt-[20px] bg-gradient-to-b from-[#E8F7FF] to-transparent pb-4">
+            <nav className="fixed top-0 left-0 right-0 mx-auto w-full max-w-container z-[100] px-[10px] md:px-[20px] pt-[10px] md:pt-[20px] pb-4">
                 <div className="glass-navbar bg-white/95 shadow-xl flex items-center justify-between px-4 md:px-10 border border-white/40 h-[70px] md:h-[88px]">
                     {/* Left: Logo & Title */}
                     <Link to="/" className="flex items-center gap-2 md:gap-4">
